@@ -15,6 +15,19 @@
 
         }
 
+        pre {
+            display: inline-block;
+            margin-left: -55px;
+        }
+
+        code {
+            display: inline-block;
+            background-color: #eee;
+            border: 1px solid #999;
+            color: red;
+            font-size: .7em;
+            margin-left: 0;
+        }
 
 
         .popOver {
@@ -27,38 +40,51 @@
             font-size: .7em;
         }
 
-        .highlightMe:hover {
-                color: #7f40bf;
+        .absolute {
+            position: absolute;
         }
 
-        #popCont{
+        .functionPop {
+            margin: 26px 0;
+            height: inherit;
+            width: 30vw;
+        }
+
+        .highlightMe:hover {
+            color: #7f40bf;
+        }
+
+        #functionExCodeCont{
+            display: flex;
+        }
+
+        #popCont, #functionpopCont {
             position: relative;
         }
 
-        #showOne{
-            position: absolute;
+
+        #showOne {
             left: 0%;
         }
 
         #showTwo {
-            position: absolute;
             left: 12%;
         }
 
         #showThree {
-            position: absolute;
             left: 25%;
         }
 
         #showFour {
-            position: absolute;
             left: 42%;
         }
 
         #showFive {
-            position: absolute;
             right: 8%;
         }
+
+
+
 
     </style>
 </head>
@@ -66,17 +92,19 @@
 <h1>javascript functions~~~</h1>
 
 <p>
-    <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span> that <span class="highlightMe"
-        id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>. <span class="highlightMe"
-        id="five">If the input is Not A Number, then return false.</span><br>
+    <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span>
+    that <span class="highlightMe"
+               id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>.
+    <span class="highlightMe"
+          id="five">If the input is Not A Number, then return false.</span><br>
 
-    <div id="popCont">
-        <div class="popOver" id="showOne">Starting point : common</div>
-        <div class="popOver" id="showTwo">gives you the function name</div>
-        <div class="popOver" id="showThree">hint of number, type of, and expected parameters</div>
-        <div class="popOver" id="showFour">logical goal and conditions to pass</div>
-        <div class="popOver" id="showFive">more expectations of a condition and return</div>
-    </div>
+<div id="popCont">
+    <div class="popOver absolute" id="showOne">Starting point : common</div>
+    <div class="popOver absolute" id="showTwo">gives you the function name</div>
+    <div class="popOver absolute" id="showThree">hint of number, type of, and expected parameters</div>
+    <div class="popOver absolute" id="showFour">logical goal and conditions to pass</div>
+    <div class="popOver absolute" id="showFive">more expectations of a condition and return</div>
+</div>
 
 addOn2(2) // 4<br>
 addOn2("22") // 24<br>
@@ -88,8 +116,31 @@ addOn2(true) // false<br>
 <br>
 <br>
 
+<div id="functionExCodeCont">
+    <pre>
+        <code>
+            <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {
+                <span class="highlightMe" id="functionThree">if ( isNaN(parseFloat(in1))) {
+                    return false</span>
+            } <span class="highlightMe">else</span> {
+            <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>
+                }
+            }
+        </code>
+    </pre>
 
-<span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>
+    <div id="functionpopCont">
+        <div class="popOver functionPop" id="functionPopover1">function + function name: usually a hint of ACTION or INTENDED LOGIC</div>
+        <div class="popOver functionPop" id="functionPopover2">parameters - an expectation of what to bring into the function (arr, input, int, str, username)</div>
+        <div class="popOver functionPop" id="functionPopover3">take input one (in1) > parseFloat this input [can work with str too] > isNaN check of now-parsed in1 > if isNaN is TRUE return FALSE and stop function</div>
+        <div class="popOver functionPop" id="functionPopover4">return [give me back] the in1 adding two as the function ends</div>
+    </div>
+</div>
+<br>
+<br>
+
+<span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span
+        class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>
 <br>
 isNegative(-1) // true<br>
 isNegative(0) // false<br>
@@ -106,25 +157,51 @@ isNegative(true) // false<br>
         crossorigin="anonymous"></script>
 
 <script>
-    $("#one").hover(function(){
+
+    // prompt popovers
+
+    $("#one").hover(function () {
         $("#showOne").toggle(300);
     })
 
-    $("#two").hover(function(){
+    $("#two").hover(function () {
         $("#showTwo").toggle(300);
     })
 
-    $("#three").hover(function(){
+    $("#three").hover(function () {
         $("#showThree").toggle(300);
     })
 
-    $("#four").hover(function(){
+    $("#four").hover(function () {
         $("#showFour").toggle(300);
     })
 
-    $("#five").hover(function(){
+    $("#five").hover(function () {
         $("#showFive").toggle(300);
     })
+
+    // function popovers
+
+    $("#functionOne").click(function () {
+        $("#functionPopover1").toggle(300);
+    })
+
+    $("#functionTwo").click(function () {
+        $("#functionPopover2").toggle(300);
+    })
+
+    $("#functionThree").click(function () {
+        $("#functionPopover3").toggle(300);
+    })
+
+    $("#functionFour").click(function () {
+        $("#functionPopover4").toggle(300);
+    })
+
+
+
+
+
 </script>
 
 </body>
