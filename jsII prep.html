@@ -55,13 +55,24 @@
         }
 
         #functionExCodeCont{
-            display: flex;
+            display: none;
         }
 
         #popCont, #functionpopCont {
             position: relative;
         }
 
+        #parseParaHiLite:hover {
+            color: darkblue;
+        }
+
+        #nanParaHiLite:hover {
+            color: salmon;
+        }
+
+        #ifstmtHiLite:hover {
+            color: dodgerblue;
+        }
 
         #showOne {
             left: 0%;
@@ -89,38 +100,40 @@
     </style>
 </head>
 <body>
-<h1>javascript functions~~~</h1>
+<h1>javascript functions~~<span id="tilde">~</span></h1>
 
-<p>
-    <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span>
-    that <span class="highlightMe"
-               id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>.
-    <span class="highlightMe"
-          id="five">If the input is Not A Number, then return false.</span><br>
+<div id="functionTopExCont">
+    <p>
+        <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span>
+        that <span class="highlightMe"
+                   id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>.
+        <span class="highlightMe"
+              id="five">If the input is Not A Number, then return false.</span><br>
 
-<div id="popCont">
-    <div class="popOver absolute" id="showOne">Starting point : common</div>
-    <div class="popOver absolute" id="showTwo">gives you the function name</div>
-    <div class="popOver absolute" id="showThree">hint of number, type of, and expected parameters</div>
-    <div class="popOver absolute" id="showFour">logical goal and conditions to pass</div>
-    <div class="popOver absolute" id="showFive">more expectations of a condition and return</div>
+    <div id="popCont">
+        <div class="popOver absolute" id="showOne">Starting point : common</div>
+        <div class="popOver absolute" id="showTwo">gives you the function name</div>
+        <div class="popOver absolute" id="showThree">hint of number, type of, and expected parameters</div>
+        <div class="popOver absolute" id="showFour">logical goal and conditions to pass</div>
+        <div class="popOver absolute" id="showFive">more expectations of a condition and return</div>
+    </div>
+
+    addOn2(2) // 4<br>
+    addOn2("22") // 24<br>
+    addOn2("-4") // -2<br>
+    addOn2("ken") // false<br>
+    addOn2(null) // false<br>
+    addOn2(true) // false<br>
+
+    <br>
+    <br>
 </div>
-
-addOn2(2) // 4<br>
-addOn2("22") // 24<br>
-addOn2("-4") // -2<br>
-addOn2("ken") // false<br>
-addOn2(null) // false<br>
-addOn2(true) // false<br>
-
-<br>
-<br>
 
 <div id="functionExCodeCont">
     <pre>
         <code>
             <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {
-                <span class="highlightMe" id="functionThree">if ( isNaN(parseFloat(in1))) {
+            <span class="highlightMe" id="functionThree">if <span id="ifstmtHiLite">( isNaN<span id="nanParaHiLite">(parseFloat<span id="parseParaHiLite">(in1)</span>)</span>)</span> {
                     return false</span>
             } <span class="highlightMe">else</span> {
             <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>
@@ -198,7 +211,11 @@ isNegative(true) // false<br>
         $("#functionPopover4").toggle(300);
     })
 
+    $("#tilde").click(function () {
+        $("#functionExCodeCont").toggle(100);
+        $("#functionTopExCont").toggle("slow");
 
+    })
 
 
 
