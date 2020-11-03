@@ -194,108 +194,72 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
 
+<script src="htmlJS.js"></script>
+
 <script>
 
-    // prompt popovers
-
-    $("#one").hover(function () {
-        $("#showOne").toggle(300);
-    })
-
-    $("#two").hover(function () {
-        $("#showTwo").toggle(300);
-    })
-
-    $("#three").hover(function () {
-        $("#showThree").toggle(300);
-    })
-
-    $("#four").hover(function () {
-        $("#showFour").toggle(300);
-    })
-
-    $("#five").hover(function () {
-        $("#showFive").toggle(300);
-    })
-
-    // function popovers
-
-    $("#functionOne").click(function () {
-        $("#functionPopover1").toggle(300);
-    })
-
-    $("#functionTwo").click(function () {
-        $("#functionPopover2").toggle(300);
-    })
-
-    $("#functionThree").click(function () {
-        $("#functionPopover3").toggle(300);
-    })
-
-    $("#functionFour").click(function () {
-        $("#functionPopover4").toggle(300);
-    })
-
-
-    $("#functionSimplerOne").click(function () {
-        $("#functionSimplerPopover1").toggle(300);
-    })
-
-    $("#functionSimplerTwo").click(function () {
-        $("#functionSimplerPopover2").toggle(300);
-    })
-
-    $("#functionSimplerThree").click(function () {
-        $("#functionSimplerPopover3").toggle(300);
-    })
-
-    $("#functionSimplerFour").click(function () {
-        $("#functionSimplerPopover4").toggle(300);
-    })
-
-    $("#tilde").click(function () {
-        $("#functionTopExCont").toggle(100);
-        $("#functionBottomExCont").toggle(100);
-        $("#functionExCodeCont2").toggle("slow");
-
-    })
-
-    $("#penUltTilde").click(function () {
-        $("#functionTopExCont").toggle(100);
-        $("#functionBottomExCont").toggle(100);
-        $("#functionExCodeCont2").toggle("slow");
-    })
-
-    // var userName = "";
-    //
-    // while (userName === ""){
-    //     userName = prompt("What is your name?")
-    //
-    // let randomNum = Math.floor(Math.random() * 50) + 1;
-    //
-    // console.log("hello there number : " + randomNum)
-    //
-    // for (let i = 0; i <= 50; i++){
-    //     randomNum = 2;
-    // }
-    //     if (i % 2 === 0){
-    //         continue;
-    //     } else if (i === randomNum){
-    //         console.log("NOOOOOOOOOOOOOOOOOOOO " + randomNum)
-    //     } else {
-    //         console.log("okay " + i)
-    //     }
-    // }
-
+// function definitions
 
     function someFunctionNoParameters(){
         return alert("Hello there, Kalypso!");
     }
-    //
 
     function someFunctionWithParameter(name){
         return alert("Hello there," + name);
     }
+
+// storing your return as a value
+
+    function increment(x) {
+        return x + 1;
+    }
+
+    var four = increment(3);
+    var five = increment(increment(3));
+    var six = increment(increment(increment(3)));
+
+// Anonymous Functions [when passed into parent function AKA 'callback' functions]
+
+// console.log(honkHorn());
+
+// function honkHorn(){
+//     return "beep beep";
+// }
+
+// var honkHorn = function(){
+//     return "beep beep";
+// }
+//
+// console.log(honkHorn());
+
+
+//scope
+
+    // var globalVar = "Look, I'm Global!"; // declare a global variable
+
+    // function scopeExample() {
+    //     var localVar = "Look, I'm Local!"; // declare a local variable
+    //     alert(localVar); // localVar is accessible here
+    //     alert(globalVar); // globalVar is accessible here
+    // }
+
+    // scopeExample();
+    // alert(localVar); // localVar is NOT accessible here and this will produce an error
+
+//IFFE : a wall for your JS
+
+    // (function (){
+    // "use strict";
+    //     var globalVar = "Now locked behind an IFFE!";
+    // console.log("Console Log: " + globalVar);
+    // })();
+
+
+// default parameter
+
+    // function sayHello(name = "Casey"){
+    //     return alert("Hello there," + name);
+    // }
 
 </script>
 
