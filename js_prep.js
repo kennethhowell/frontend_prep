@@ -8,12 +8,12 @@ function addOn2 (in1) {
     }
 }
 
-function subtract (in1, in2) {
-    if (isNaN(parseFloat(in1) || isNaN(parseFloat(in2)) ){
-
-    }
-
-}
+// function subtract (in1, in2) {
+//     if (isNaN(parseFloat(in1) || isNaN(parseFloat(in2)) ){
+//
+//     }
+//
+// }
 // caught strings concatenating WITHOUT PERMISSION >:O
 
 
@@ -58,15 +58,15 @@ function isNegative (input){
 
 
 }
-
-// //Write a function named totalPets that accepts an array of objects where each object represents a person, and has a numPets for their owned pets. The function should return the sum of every object's numPets property.
-// //
+//
+// Write a function named totalPets that accepts an array of objects where each object represents a person, and has a numPets for their owned pets. The function should return the sum of every object's numPets property.
+//
 // totalPets([
 //     {name: 'Fernando Mendoza', pets: 1},
 //     {name: 'Douglas Hirsh', pets: 8},
 //     {name: 'Kenneth Howell', pets: 2},
 // ])
-//11
+// //11
 
 function totalPets(arr){
 

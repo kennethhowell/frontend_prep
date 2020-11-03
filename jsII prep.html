@@ -45,16 +45,16 @@
         }
 
         .functionPop {
-            margin: 26px 0;
             height: inherit;
-            width: 30vw;
+            margin-left: 20%;
+            width: 60vw;
         }
 
         .highlightMe:hover {
             color: #7f40bf;
         }
 
-        #functionExCodeCont{
+        #functionExCodeCont, #functionExCodeCont2{
             display: none;
         }
 
@@ -66,11 +66,11 @@
             color: darkblue;
         }
 
-        #nanParaHiLite:hover {
+        #nanParaHiLite:hover  {
             color: salmon;
         }
 
-        #ifstmtHiLite:hover {
+        #ifstmtHiLite:hover, #functionSimplerFour:hover {
             color: dodgerblue;
         }
 
@@ -100,7 +100,7 @@
     </style>
 </head>
 <body>
-<h1>javascript functions~~<span id="tilde">~</span></h1>
+<h1>javascript functions~<span id="penUltTilde">~</span><span id="tilde">~</span></h1>
 
 <div id="functionTopExCont">
     <p>
@@ -129,40 +129,65 @@
     <br>
 </div>
 
-<div id="functionExCodeCont">
-    <pre>
-        <code>
-            <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {
-            <span class="highlightMe" id="functionThree">if <span id="ifstmtHiLite">( isNaN<span id="nanParaHiLite">(parseFloat<span id="parseParaHiLite">(in1)</span>)</span>)</span> {
-                    return false</span>
-            } <span class="highlightMe">else</span> {
-            <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>
+    <div id="functionExCodeCont">
+        <pre>
+            <code>
+                <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {
+                <span class="highlightMe" id="functionThree">if <span id="ifstmtHiLite">( isNaN<span id="nanParaHiLite">(parseFloat<span id="parseParaHiLite">(in1)</span>)</span>)</span> {
+                        return false</span>
+                } <span class="highlightMe">else</span> {
+                <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>
+                    }
                 }
-            }
-        </code>
-    </pre>
+            </code>
+        </pre>
 
-    <div id="functionpopCont">
-        <div class="popOver functionPop" id="functionPopover1">function + function name: usually a hint of ACTION or INTENDED LOGIC</div>
-        <div class="popOver functionPop" id="functionPopover2">parameters - an expectation of what to bring into the function (arr, input, int, str, username)</div>
-        <div class="popOver functionPop" id="functionPopover3">take input one (in1) > parseFloat this input [can work with str too] > isNaN check of now-parsed in1 > if isNaN is TRUE return FALSE and stop function</div>
-        <div class="popOver functionPop" id="functionPopover4">return [give me back] the in1 adding two as the function ends</div>
+            <div id="functionpopCont">
+                <div class="popOver functionPop" id="functionPopover1">function + function name: usually a hint of ACTION or INTENDED LOGIC</div>
+                <div class="popOver functionPop" id="functionPopover2">parameters - an expectation of what to bring into the function (arr, input, int, str, username)</div>
+                <div class="popOver functionPop" id="functionPopover3">take input one (in1) > parseFloat this input [can work with str too] > isNaN check of now-parsed in1 > if isNaN is TRUE return FALSE and stop function</div>
+                <div class="popOver functionPop" id="functionPopover4">return [give me back] the in1 adding two as the function ends</div>
+            </div>
     </div>
+
+<!--kal:~ :~ :~ adding intro function example ~: ~: ~:-->
+
+    <div id="functionExCodeCont2">
+        <pre>
+            <code>
+                <span class="highlightMe" id="functionSimplerOne">function someFunctionNoParameters</span> <span class="highlightMe" id="functionSimplerTwo">()</span> <span class="highlightMe"><span id="functionSimplerThree">{</span>
+                <span id="functionSimplerFour"> return alert("Hello there, Kalypso!");</span>
+                }</span>
+            </code>
+        </pre>
+
+            <div id="functionpopSimplerCont">
+                <div class="popOver functionPop" id="functionSimplerPopover1"><b>keyword</b> function + function name (someFunctionNoParameters)</div>
+                <div class="popOver functionPop" id="functionSimplerPopover2">parenthesis - with space for input (parameters) or not</div>
+                <div class="popOver functionPop" id="functionSimplerPopover3">curly braces - mark the <b>body</b> of our function [our instructions / guts of the function]</b></div>
+                <div class="popOver functionPop" id="functionSimplerPopover4">return statement [fire off an ALERT containing this String (text) within double quotes]</div>
+            </div>
+    </div>
+
+
+
+
+<br>
+<br>
+
+
+<div id="functionBottomExCont">
+    <span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span
+            class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>
+    <br>
+    isNegative(-1) // true<br>
+    isNegative(0) // false<br>
+    isNegative('monday') // false<br>
+    isNegative('-4') // false<br>
+    isNegative(true) // false<br>
 </div>
-<br>
-<br>
 
-<span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span
-        class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>
-<br>
-isNegative(-1) // true<br>
-isNegative(0) // false<br>
-isNegative('monday') // false<br>
-isNegative('-4') // false<br>
-isNegative(true) // false<br>
-
-
-</p>
+<!--</p>-->
 
 <script
         src="https://code.jquery.com/jquery-3.5.1.js"
@@ -211,32 +236,65 @@ isNegative(true) // false<br>
         $("#functionPopover4").toggle(300);
     })
 
+
+    $("#functionSimplerOne").click(function () {
+        $("#functionSimplerPopover1").toggle(300);
+    })
+
+    $("#functionSimplerTwo").click(function () {
+        $("#functionSimplerPopover2").toggle(300);
+    })
+
+    $("#functionSimplerThree").click(function () {
+        $("#functionSimplerPopover3").toggle(300);
+    })
+
+    $("#functionSimplerFour").click(function () {
+        $("#functionSimplerPopover4").toggle(300);
+    })
+
     $("#tilde").click(function () {
-        $("#functionExCodeCont").toggle(100);
-        $("#functionTopExCont").toggle("slow");
+        $("#functionTopExCont").toggle(100);
+        $("#functionBottomExCont").toggle(100);
+        $("#functionExCodeCont2").toggle("slow");
 
     })
 
+    $("#penUltTilde").click(function () {
+        $("#functionTopExCont").toggle(100);
+        $("#functionBottomExCont").toggle(100);
+        $("#functionExCodeCont2").toggle("slow");
+    })
 
-    var userName = "";
+    // var userName = "";
+    //
+    // while (userName === ""){
+    //     userName = prompt("What is your name?")
+    //
+    // let randomNum = Math.floor(Math.random() * 50) + 1;
+    //
+    // console.log("hello there number : " + randomNum)
+    //
+    // for (let i = 0; i <= 50; i++){
+    //     randomNum = 2;
+    // }
+    //     if (i % 2 === 0){
+    //         continue;
+    //     } else if (i === randomNum){
+    //         console.log("NOOOOOOOOOOOOOOOOOOOO " + randomNum)
+    //     } else {
+    //         console.log("okay " + i)
+    //     }
+    // }
 
-    while (userName === ""){
-        userName = prompt("What is your name?")
 
-    let randomNum = Math.floor(Math.random() * 50) + 1;
-
-    console.log("hello there number : " + randomNum)
-
-    for (let i = 0; i <= 50; i++){
-        randomNum = 2;
+    function someFunctionNoParameters(){
+        return alert("Hello there, Kalypso!");
     }
-        if (i % 2 === 0){
-            continue;
-        } else if (i === randomNum){
-            console.log("NOOOOOOOOOOOOOOOOOOOO " + randomNum)
-        } else {
-            console.log("okay " + i)
-        }
+    //
+
+    function someFunctionWithParameter(name){
+        return alert("Hello there," + name);
     }
 
 </script>
