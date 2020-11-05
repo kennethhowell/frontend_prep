@@ -225,31 +225,35 @@
 // function honkHorn(){
 //     return "beep beep";
 // }
-
+//
 // var honkHorn = function(){
 //     return "beep beep";
 // }
-//
+// //
 // console.log(honkHorn());
 
 
 // default parameter
 
-// function sayHello(name = "Casey"){
-//     return alert("Hello there," + name);
-// }
+function sayHello(name = "Casey"){
+    return alert("Hello there," + name);
+}
 
 //scope
 
-    // var globalVar = "Look, I'm Global!"; // declare a global variable
+    var globalVar = "Look, I'm Global!"; // declare a global variable
 
-    // function scopeExample() {
-    //     var localVar = "Look, I'm Local!"; // declare a local variable
-    //     alert(localVar); // localVar is accessible here
-    //     alert(globalVar); // globalVar is accessible here
-    // }
+    function scopeExample() {
+        var globalVar = "Look, I'm Local!"; // declare a local variable
+        // alert(localVar); // localVar is accessible here
+        alert(globalVar); // globalVar is accessible here
+    }
 
     // scopeExample();
+
+// alert(globalVar);
+// scopeExample();
+
     // alert(localVar); // localVar is NOT accessible here and this will produce an error
 
 //IFFE : a wall for your JS
