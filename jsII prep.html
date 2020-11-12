@@ -222,11 +222,17 @@
     //     alert("Thanks, mom! You're the best!");
     // }
 
-    // Kalypso: help me create a WHILE loop that rungs as long as i is less than 10;
-
     // Notice that much like an if statement, our while loop will only run if the initial condition is met.
 
-    //
+    // Kalypso: help me create a WHILE loop that runs as long as i is less than 10;
+
+
+
+
+
+
+
+    // Let's take that further and use it in a function definition:
     // function incrementUntilTen(num) {
     //     var i = 0;
     //     while (num < 10) {
@@ -265,19 +271,33 @@
     //     var secret = prompt("What is the secret password?");
     // } while ( secret !== "sesame" )
 
-    // Let's have some fun with it:
+    // Let's have some fun with this: A conversation between a TOMB THIEF and the GUARDIAN TO THE DOOR:
 
-    // var secret = "sesame";
+    var secret;
 
-    // do {
-    //     alert("I thought I told you already what the secret was? o_o")
-    // } while (secret !== "sesame")
+    while (secret !== "sesame") {
+        secret = prompt("'To proceed, you must tell me the secret password. . .'")
+    }
 
-    // while (secret !== "sesame") {
-    //     alert("I definitely told you already what the secret was. -_-")
-    //     secret = "sesame";
-    // }
+    if (secret === "sesame"){
+        alert("'YES. You have whispered the correct password.'")
+        alert("Nothing happens.")
+    }
 
+    do {
+        alert("'I thought I told you already what the secret was? o_o'")
+    } while (secret !== "sesame")
+
+    while (secret !== "sesame"){
+        console.log("'You won't see me, but my name is George, and it's my job to keep this door working. I'm gonna fix it up in the background for us. Thanks for visiting the FORBIDDEN CAVERNS!'")
+    }
+
+    while (secret == "sesame") {
+        alert("I definitely told you already what the secret was. -_- This door is wack.")
+        alert("The door SHUDDERS SUDDENLY and opens crankily with a cacophany of noise that is worrisome. .")
+        console.log("'Hey, George again - come on in, I need to put the door offline for a bit after you're in, so I'm going to reset the secret after you're in. Enjoy the FORBIDDEN CAVERNS!!'")
+        secret = "georgewuzhere";
+    }
 
     // We can continue to use this logic within a function.
 
@@ -389,8 +409,8 @@
         return x;
     }
 
-    allOddNumbersToX(17);
-    allOddNumbersToX(18);
+    // allOddNumbersToX(17);
+    // allOddNumbersToX(18);
 
 
     // The above function will only log the odd numbers until the argument passed.
