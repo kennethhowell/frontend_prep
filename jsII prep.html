@@ -100,74 +100,74 @@
     </style>
 </head>
 <body>
-<h1>javascript functions~<span id="penUltTilde">~</span><span id="tilde">~</span></h1>
+<h1>javascript loops~<span id="penUltTilde">~</span><span id="tilde">~</span></h1>
 
-<div id="functionTopExCont">
-    <p>
-        <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span>
-        that <span class="highlightMe"
-                   id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>.
-        <span class="highlightMe"
-              id="five">If the input is Not A Number, then return false.</span><br>
+<!--<div id="functionTopExCont">-->
+<!--    <p>-->
+<!--        <span class="highlightMe" id="one">Define a function</span> <span class="highlightMe" id="two">named addOn2</span>-->
+<!--        that <span class="highlightMe"-->
+<!--                   id="three">takes in an input</span> and <span class="highlightMe" id="four">increases by 2 if the input is numeric</span>.-->
+<!--        <span class="highlightMe"-->
+<!--              id="five">If the input is Not A Number, then return false.</span><br>-->
 
-    <div id="popCont">
-        <div class="popOver absolute" id="showOne">Starting point : common</div>
-        <div class="popOver absolute" id="showTwo">gives you the function name</div>
-        <div class="popOver absolute" id="showThree">hint of number, type of, and expected parameters</div>
-        <div class="popOver absolute" id="showFour">logical goal and conditions to pass</div>
-        <div class="popOver absolute" id="showFive">more expectations of a condition and return</div>
-    </div>
+<!--    <div id="popCont">-->
+<!--        <div class="popOver absolute" id="showOne">Starting point : common</div>-->
+<!--        <div class="popOver absolute" id="showTwo">gives you the function name</div>-->
+<!--        <div class="popOver absolute" id="showThree">hint of number, type of, and expected parameters</div>-->
+<!--        <div class="popOver absolute" id="showFour">logical goal and conditions to pass</div>-->
+<!--        <div class="popOver absolute" id="showFive">more expectations of a condition and return</div>-->
+<!--    </div>-->
 
-    addOn2(2) // 4<br>
-    addOn2("22") // 24<br>
-    addOn2("-4") // -2<br>
-    addOn2("ken") // false<br>
-    addOn2(null) // false<br>
-    addOn2(true) // false<br>
+<!--    addOn2(2) // 4<br>-->
+<!--    addOn2("22") // 24<br>-->
+<!--    addOn2("-4") // -2<br>-->
+<!--    addOn2("ken") // false<br>-->
+<!--    addOn2(null) // false<br>-->
+<!--    addOn2(true) // false<br>-->
 
-    <br>
-    <br>
-</div>
+<!--    <br>-->
+<!--    <br>-->
+<!--</div>-->
 
-    <div id="functionExCodeCont">
-        <pre>
-            <code>
-                <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {
-                <span class="highlightMe" id="functionThree">if <span id="ifstmtHiLite">( isNaN<span id="nanParaHiLite">(parseFloat<span id="parseParaHiLite">(in1)</span>)</span>)</span> {
-                        return false</span>
-                } <span class="highlightMe">else</span> {
-                <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>
-                    }
-                }
-            </code>
-        </pre>
+<!--    <div id="functionExCodeCont">-->
+<!--        <pre>-->
+<!--            <code>-->
+<!--                <span class="highlightMe" id="functionOne">function addOn2</span> <span class="highlightMe" id="functionTwo">(in1)</span> {-->
+<!--                <span class="highlightMe" id="functionThree">if <span id="ifstmtHiLite">( isNaN<span id="nanParaHiLite">(parseFloat<span id="parseParaHiLite">(in1)</span>)</span>)</span> {-->
+<!--                        return false</span>-->
+<!--                } <span class="highlightMe">else</span> {-->
+<!--                <span class="highlightMe" id="functionFour">return parseFloat(in1)+2;</span>-->
+<!--                    }-->
+<!--                }-->
+<!--            </code>-->
+<!--        </pre>-->
 
-            <div id="functionpopCont">
-                <div class="popOver functionPop" id="functionPopover1">function + function name: usually a hint of ACTION or INTENDED LOGIC</div>
-                <div class="popOver functionPop" id="functionPopover2">parameters - an expectation of what to bring into the function (arr, input, int, str, username)</div>
-                <div class="popOver functionPop" id="functionPopover3">take input one (in1) > parseFloat this input [can work with str too] > isNaN check of now-parsed in1 > if isNaN is TRUE return FALSE and stop function</div>
-                <div class="popOver functionPop" id="functionPopover4">return [give me back] the in1 adding two as the function ends</div>
-            </div>
-    </div>
+<!--            <div id="functionpopCont">-->
+<!--                <div class="popOver functionPop" id="functionPopover1">function + function name: usually a hint of ACTION or INTENDED LOGIC</div>-->
+<!--                <div class="popOver functionPop" id="functionPopover2">parameters - an expectation of what to bring into the function (arr, input, int, str, username)</div>-->
+<!--                <div class="popOver functionPop" id="functionPopover3">take input one (in1) > parseFloat this input [can work with str too] > isNaN check of now-parsed in1 > if isNaN is TRUE return FALSE and stop function</div>-->
+<!--                <div class="popOver functionPop" id="functionPopover4">return [give me back] the in1 adding two as the function ends</div>-->
+<!--            </div>-->
+<!--    </div>-->
 
-<!--kal:~ :~ :~ adding intro function example ~: ~: ~:-->
+<!--&lt;!&ndash;kal:~ :~ :~ adding intro function example ~: ~: ~:&ndash;&gt;-->
 
-    <div id="functionExCodeCont2">
-        <pre>
-            <code>
-                <span class="highlightMe" id="functionSimplerOne">function someFunctionNoParameters</span> <span class="highlightMe" id="functionSimplerTwo">()</span> <span class="highlightMe"><span id="functionSimplerThree">{</span>
-                <span id="functionSimplerFour"> return alert("Hello there, Kalypso!");</span>
-                }</span>
-            </code>
-        </pre>
+<!--    <div id="functionExCodeCont2">-->
+<!--        <pre>-->
+<!--            <code>-->
+<!--                <span class="highlightMe" id="functionSimplerOne">function someFunctionNoParameters</span> <span class="highlightMe" id="functionSimplerTwo">()</span> <span class="highlightMe"><span id="functionSimplerThree">{</span>-->
+<!--                <span id="functionSimplerFour"> return alert("Hello there, Kalypso!");</span>-->
+<!--                }</span>-->
+<!--            </code>-->
+<!--        </pre>-->
 
-            <div id="functionpopSimplerCont">
-                <div class="popOver functionPop" id="functionSimplerPopover1"><b>keyword</b> function + function name (someFunctionNoParameters)</div>
-                <div class="popOver functionPop" id="functionSimplerPopover2">parenthesis - with space for input (parameters) or not</div>
-                <div class="popOver functionPop" id="functionSimplerPopover3">curly braces - mark the <b>body</b> of our function [our instructions / guts of the function]</b></div>
-                <div class="popOver functionPop" id="functionSimplerPopover4">return statement [fire off an ALERT containing this String (text) within double quotes]</div>
-            </div>
-    </div>
+<!--            <div id="functionpopSimplerCont">-->
+<!--                <div class="popOver functionPop" id="functionSimplerPopover1"><b>keyword</b> function + function name (someFunctionNoParameters)</div>-->
+<!--                <div class="popOver functionPop" id="functionSimplerPopover2">parenthesis - with space for input (parameters) or not</div>-->
+<!--                <div class="popOver functionPop" id="functionSimplerPopover3">curly braces - mark the <b>body</b> of our function [our instructions / guts of the function]</b></div>-->
+<!--                <div class="popOver functionPop" id="functionSimplerPopover4">return statement [fire off an ALERT containing this String (text) within double quotes]</div>-->
+<!--            </div>-->
+<!--    </div>-->
 
 
 
@@ -176,16 +176,16 @@
 <br>
 
 
-<div id="functionBottomExCont">
-    <span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span
-            class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>
-    <br>
-    isNegative(-1) // true<br>
-    isNegative(0) // false<br>
-    isNegative('monday') // false<br>
-    isNegative('-4') // false<br>
-    isNegative(true) // false<br>
-</div>
+<!--<div id="functionBottomExCont">-->
+<!--    <span class="highlightMe">Define a function</span> <span class="highlightMe">named isNegative</span> <span-->
+<!--            class="highlightMe">that takes in a number</span> and <span class="highlightMe"> returns true if it is a negative.</span><br>-->
+<!--    <br>-->
+<!--    isNegative(-1) // true<br>-->
+<!--    isNegative(0) // false<br>-->
+<!--    isNegative('monday') // false<br>-->
+<!--    isNegative('-4') // false<br>-->
+<!--    isNegative(true) // false<br>-->
+<!--</div>-->
 
 <!--</p>-->
 
@@ -200,7 +200,9 @@
 
 <script>
     "use strict";
-    //while loop
+    //
+    //~*~ While Loops ~*~
+    //
 
     //are we there yet?
     // var areWeThereYet;
@@ -226,12 +228,6 @@
 
     // Kalypso: help me create a WHILE loop that runs as long as i is less than 10;
 
-
-
-
-
-
-
     // Let's take that further and use it in a function definition:
     // function incrementUntilTen(num) {
     //     var i = 0;
@@ -246,6 +242,11 @@
     // incrementUntilTen will take in a number and loop, incrementing the passed number until it is at least
     // equal to 10, returning the number of times the loop was run. If the passed number is greater than or
     // equal to 10, it will return the number 0;
+
+    //
+    //~*~ Do-While Loops ~*~
+    //
+
 
     // A do/while loop is quite similar to a while loop. The biggest difference is that a do/while loop will
     // run at least once.
@@ -271,7 +272,7 @@
     //     var secret = prompt("What is the secret password?");
     // } while ( secret !== "sesame" )
 
-    // Let's have some fun with this: A conversation between a TOMB THIEF and the GUARDIAN TO THE DOOR:
+    // Let's have some fun with what we've seen so far: A conversation between a TOMB THIEF and the GUARDIAN TO THE DOOR:
 
     // var secret;
     //
@@ -285,23 +286,23 @@
     // }
     //
     // do {
-    //     alert("'I thought I told you already what the secret was? o_o'");
+    //     alert("The door is unmoving. 'I thought I told you already what the secret was? o_o' the TOMB THIEF asks");
     // } while (secret !== "sesame")
     //
     // while (secret !== "sesame"){
-    //     console.log("'You won't see me, but my name is George, and it's my job to keep this door working. I'm gonna fix it up in the background for us. Thanks for visiting the FORBIDDEN CAVERNS!'");
+    //     console.log("'You won't see me, but my name is George, and I'm the guy that opens the door - sorry, I overslept!! Thanks for visiting the FORBIDDEN CAVERNS!'");
     // }
     //
     // while (secret == "sesame") {
     //     alert("I definitely told you already what the secret was. -_- This door is wack.");
     //     alert("The door SHUDDERS SUDDENLY and opens crankily with a cacophany of noise that is worrisome. .");
-    //     console.log("'Hey, George again - come on in, I need to put the door offline for a bit after you're in, so I'm going to reset the secret after you're in. Enjoy the FORBIDDEN CAVERNS!!'");
+    //     console.log("'Hey, George again - come on in, I need to put the door offline for a bit after you're in, so I'm going to reset the secret. Enjoy the FORBIDDEN CAVERNS!!'");
     //     secret = "georgewuzhere";
     // }
 
     // We can also use what we've learned above within the body of your functions:
 
-    function multiplyByTwoUntilGreaterThan100(num) {
+    function dowhilemultiplyByTwoUntilGreaterThan100(num) {
         var i = 0;
         do {
             num = num * 2;
@@ -311,7 +312,7 @@
         return i;
     }
 
-    function whilemultiplyByTwoUntilGreaterThan100(num) {
+    function whileloopmultiplyByTwoUntilGreaterThan100(num) {
         var i = 0;
         while (num < 100){
             num = num * 2;
@@ -376,8 +377,8 @@
 
 // We can get a loop to stop using break;
 
-    var x = 0;
-
+    // var x = 0;
+    //
     // while (true) {
     //     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
     //     x++;
