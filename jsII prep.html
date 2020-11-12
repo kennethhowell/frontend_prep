@@ -273,33 +273,33 @@
 
     // Let's have some fun with this: A conversation between a TOMB THIEF and the GUARDIAN TO THE DOOR:
 
-    var secret;
+    // var secret;
+    //
+    // while (secret !== "sesame") {
+    //     secret = prompt("'To proceed, you must tell me the secret password. . .'");
+    // }
+    //
+    // if (secret === "sesame"){
+    //     alert("'YES. You have whispered the correct password.'");
+    //     alert("Nothing happens.");
+    // }
+    //
+    // do {
+    //     alert("'I thought I told you already what the secret was? o_o'");
+    // } while (secret !== "sesame")
+    //
+    // while (secret !== "sesame"){
+    //     console.log("'You won't see me, but my name is George, and it's my job to keep this door working. I'm gonna fix it up in the background for us. Thanks for visiting the FORBIDDEN CAVERNS!'");
+    // }
+    //
+    // while (secret == "sesame") {
+    //     alert("I definitely told you already what the secret was. -_- This door is wack.");
+    //     alert("The door SHUDDERS SUDDENLY and opens crankily with a cacophany of noise that is worrisome. .");
+    //     console.log("'Hey, George again - come on in, I need to put the door offline for a bit after you're in, so I'm going to reset the secret after you're in. Enjoy the FORBIDDEN CAVERNS!!'");
+    //     secret = "georgewuzhere";
+    // }
 
-    while (secret !== "sesame") {
-        secret = prompt("'To proceed, you must tell me the secret password. . .'");
-    }
-
-    if (secret === "sesame"){
-        alert("'YES. You have whispered the correct password.'");
-        alert("Nothing happens.");
-    }
-
-    do {
-        alert("'I thought I told you already what the secret was? o_o'");
-    } while (secret !== "sesame")
-
-    while (secret !== "sesame"){
-        console.log("'You won't see me, but my name is George, and it's my job to keep this door working. I'm gonna fix it up in the background for us. Thanks for visiting the FORBIDDEN CAVERNS!'");
-    }
-
-    while (secret == "sesame") {
-        alert("I definitely told you already what the secret was. -_- This door is wack.");
-        alert("The door SHUDDERS SUDDENLY and opens crankily with a cacophany of noise that is worrisome. .");
-        console.log("'Hey, George again - come on in, I need to put the door offline for a bit after you're in, so I'm going to reset the secret after you're in. Enjoy the FORBIDDEN CAVERNS!!'");
-        secret = "georgewuzhere";
-    }
-
-    // We can continue to use this logic within a function.
+    // We can also use what we've learned above within the body of your functions:
 
     function multiplyByTwoUntilGreaterThan100(num) {
         var i = 0;
@@ -321,8 +321,8 @@
         return i;
     }
 
-
-    // like our previous function, we are return the number of times a number was multiplied the number by two to get to greater than 100. This function will always return 1 or greater, as it will always multiply the number by 2 at least once.
+    // like our previous function, we are return the number of times a number was multiplied the number by two to get to greater than 100.
+    // This function will always return 1 or greater, as it will always multiply the number by 2 at least once.
 
     // console.log(multiplyByTwoUntilGreaterThan100(25));
     // console.log(multiplyByTwoUntilGreaterThan100(250));
@@ -333,11 +333,12 @@
     // }
 
     // The for loop has more to it as you can see. Let's break down the arguments:
-    // - incrementer initialization - Here we are declaring the variable for our incrementer, as well as it's
-    //      value.
+
+    // - incrementer initialization - Here we are declaring the variable for our incrementer, as well as its value.
+
     // - condition - The loop will continue to run until this condition is no longer true.
-    // - incrementer change - what happens to the incrementer in once the loop has finished executing the
-    //      code for a given iteration.
+
+    // - incrementer change - what happens to the incrementer in once the loop has finished executing the code for a given iteration.
 
     // Once again, we can use this in a function.
 
@@ -357,7 +358,7 @@
 
     // And we can use this with conditionals!
 
-    // for (var i=1; i < 25; i++){
+    // for (var i = 1; i < 25; i++){
     //     if (i % 6 == 0) console.log("Codeup");
     //     else if (i % 2 == 0) console.log("Code");
     //     else if (i % 3 == 0) console.log("Up");
