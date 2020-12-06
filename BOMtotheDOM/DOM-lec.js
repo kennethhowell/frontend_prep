@@ -80,3 +80,19 @@ searchValue.setAttribute("value", "Find local hats!"); //That sounds better! I t
 searchValue.removeAttribute("value");
 
 searchValue.setAttribute("placeholder", "Find hats in your area") //Excellent! That's the ticket!
+
+//Accessing or Modifying styles
+
+// demonstrate the BODY as a thing to manipulate - the BODY can be targeted as any other thing:
+
+// Get the body element (notice we need to use index 0 of the array!)
+var bodyElement = document.getElementsByTagName('body')[0];
+
+// Change the body font color
+bodyElement.style.color = "rebeccapurple"; // Dark grey
+
+bodyElement.style['background-color'] = "antiquewhite";
+// We had to use [] syntax since the property name has a dash
+
+bodyElement.style.fontFamily = "Helvetica, Verdana, Sans-Serif";
+// Replace dashes with camelCase to use standard . syntax
