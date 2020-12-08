@@ -52,7 +52,7 @@ var bestSellerHeader = document.getElementById("best-seller");
 bestSellerHeader.innerText = "Will update soon!"
 
 //Perhaps a little EMPHASIS will assist - will innerText help?
-bestSellerHeader.innerText = "<em>Will update soon!</em>"
+bestSellerHeader.innerHTML = "<em>Will update soon!</em>"
 
 
 //Attribute methods: hasAttribute, getAttribute, setAttribute, removeAttribute
