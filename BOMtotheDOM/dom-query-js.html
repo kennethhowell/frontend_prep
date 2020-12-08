@@ -25,6 +25,11 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Is JS cool?</button>
+<button id="btn2">Paint it blue!</button>
+<button id="btn3">Customize my list.</button>
+<button id="btn4">Houston, we're coming home!</button>
+
 <script>
     (function() {
         "use strict";
@@ -33,7 +38,7 @@
         // console.log(mainHeader)
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
 
         // TODO: Uncomment the next line and get the sub header element by id
@@ -53,18 +58,18 @@
         //Arrays are 0 index, so tricky thinking "Item 2" is index 1, "Item 4" is index 3 :)
         // TODO: Set text color of li with dbid = 1 to blue
         // We've set up a for loop running down our LIs. . let's check at each step our dbid and match it up
-        for (var i = 0; i < listItems.length; i++){
-            if (i % 2 !== 0){
-                listItems[i].style.color = "grey";
-            }
-
-            var dbId = listItems[i].getAttribute('data-dbid');
-            // console.log('dbId: ' + dbId);
-            if(dbId === "1") {
-                listItems[i].style.color = 'blue';
-            }
-
-        }
+        // for (var i = 0; i < listItems.length; i++){
+        //     if (i % 2 !== 0){
+        //         listItems[i].style.color = "grey";
+        //     }
+        //
+        //     var dbId = listItems[i].getAttribute('data-dbid');
+        //     // console.log('dbId: ' + dbId);
+        //     if(dbId === "1") {
+        //         listItems[i].style.color = 'blue';
+        //     }
+        //
+        // }
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
@@ -72,7 +77,41 @@
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        // subParagraphs[0].innerText = "Mission Accomplished!";
+
+
+        var button1 = document.getElementById("btn1")
+        var button2 = document.getElementById("btn2")
+        var button3 = document.getElementById("btn3")
+        var button4 = document.getElementById("btn4")
+
+        button1.addEventListener("click", function(){
+            mainHeader.innerHTML = "JavaScript is Cool";
+        })
+
+        button2.addEventListener("click", function(){
+            subHeader.style.color = "blue";
+        })
+
+        button3.addEventListener("click", function(){
+            for (var i = 0; i < listItems.length; i++){
+                if (i % 2 !== 0){
+                    listItems[i].style.color = "grey";
+                }
+
+                var dbId = listItems[i].getAttribute('data-dbid');
+                // console.log('dbId: ' + dbId);
+                if(dbId === "1") {
+                    listItems[i].style.color = 'blue';
+                }
+
+            }
+        })
+
+        button4.addEventListener("click", function(){
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        })
+
     })();
 </script>
 </body>
