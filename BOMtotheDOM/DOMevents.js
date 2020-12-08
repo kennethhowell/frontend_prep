@@ -2,7 +2,7 @@
 
 //Event Listeners need a TARGET: [an element, a group of elements, window object, etc.]
 
-var topHeader = document.getElementById("top-header");
+    var topHeader = document.getElementById("top-header");
 
 // .addEventListener has two parts: the WHAT [event to look for] and the WHAT TO DO [event happened! okay, I'll do X!]
 
@@ -11,8 +11,12 @@ var topHeader = document.getElementById("top-header");
 //     console.log("header moused over")
 // })
 
+// topHeader.addEventListener("mouseover", function (){
+//     console.log("header moused over");
+// })
+
 //Or prepare a function to use. .
-// function headerLog(event){
+// function headerLog(){
 //     console.log("header moused over")
 // }
 
@@ -20,16 +24,21 @@ var topHeader = document.getElementById("top-header");
 var headerLog = function headerLog(){
     console.log("header moused over")
 }
-
+//
 topHeader.addEventListener("mouseover", headerLog)
-
-//Remove an event listener works similarly
+//
+// //Remove an event listener works similarly
 // var remover = function removeHeaderLog(){
+//
+//
 // topHeader.removeEventListener("mouseover", headerLog);
+//
 // console.log("No longer tracking header mouseover.")
 // }
-//
-// topHeader.addEventListener("click", remover);
+
+// topHeader.addEventListener("click", function(){
+//     topHeader.removeEventListener("mouseover", headerLog)
+// });
 
 //A more complicated structure:
 //Let's access the first LI through the DOM
@@ -40,13 +49,13 @@ var topSeller1 = document.getElementsByTagName("li")[0];
 topSeller1.addEventListener("mouseover", function(){
     topSeller1.style.fontSize = "2em";
     topSeller1.style.fontFamily = "arial";
-    topSeller1.style.fontSize = "2em"
+    topSeller1.style.fontWeight = "strong";
 })
 
 var resetBtn = document.getElementById("resetFont");
 
 resetBtn.addEventListener("dblclick", function(){
-    topSeller1.style.fontSize = "1em"
+    topSeller1.style.fontSize = "1em";
 })
 
 //PreventDefault
@@ -60,6 +69,6 @@ btmLink.addEventListener("click", function(e){
 document.addEventListener("keypress", function(e) {
    console.log(e.code);
    if (e.code === "Space") {
-      e.preventDefault();
+      alert("The only space I have is for more hats!");
    }
 });
