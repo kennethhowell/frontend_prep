@@ -56,3 +56,10 @@ btmLink.addEventListener("click", function(e){
     e.preventDefault();
     alert("There's no escaping my hats. o_o")
 })
+
+document.addEventListener("keypress", function(e) {
+   console.log(e.code);
+   if (e.code === "Space") {
+      e.preventDefault();
+   }
+});
