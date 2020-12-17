@@ -60,13 +60,13 @@ function isNegative (input){
 }
 //
 // Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
-//
+
 // totalPets([
 //     {name: 'Fernando Mendoza', pets: 1},
 //     {name: 'Douglas Hirsh', pets: 8},
 //     {name: 'Kenneth Howell', pets: 2},
 // ])
-// //11
+//11
 
 function totalPets(arr){
 
@@ -132,3 +132,27 @@ function convertAddressToObject(str){
     return {streetNumber: streetNum, streetName: streetName};
 
 }
+
+function convertStringInputtoObject(make, model){
+    return {make: make, model: model}
+
+}
+
+function convertStringInputtoObject(make, model){
+    var car = {};
+
+    car.make = make;
+    car.model = model;
+
+
+    return car;
+
+}
+
+function convertStringInputtoObject(make, model){
+    var car = {make: make, model: model};
+
+    return car;
+
+}
+
