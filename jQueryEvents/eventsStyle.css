@@ -1,3 +1,11 @@
 #fiestaMedal {
     text-decoration: line-through;
 }
+
+#searchHats {
+    width: 15%;
+}
+
+#bugReport {
+    display: none;
+}
