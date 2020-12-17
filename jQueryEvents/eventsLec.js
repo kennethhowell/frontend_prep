@@ -78,5 +78,73 @@
 // })
 
 
+// ~~ ** ~~ k e y b o a r d events ~~ ** ~~
 
 
+// keydown
+
+// recognizes all keyboard keys when they are pushed down
+// repeats as key is held down
+//
+// $(document).keydown(function(e) {
+//     console.log(e);
+// });
+
+
+// keypress
+
+// recognizes the character that is typed
+// only recognizes keys that can have a typed output
+//
+// $(document).keypress(function(e) {
+//     console.log(e);
+//     //we know we can access PROPERTIES in objects. . therefore:
+//     console.log("Key pressed: " + e.key);
+// });
+
+
+// keyup
+
+// recognizes all keyboard keys when they are pushed down
+// recognizes all keyboard keys when they are released
+// will fire only once per key push
+
+// $(document).keyup(function(e) {
+//     console.log(e);
+// });
+//
+
+// ~~ ** ~~ .on && .off ~~ ** ~~
+
+// .on = can target dynamically [read = created after document loads, think renderCoffee from CoffeeProject]
+// LATEST BREAKING NEWS: Fourth best seller announced!! ELF HATS, we need to get this loaded up ASAP
+
+var fourthBestSeller = "<li>Elf hats</li>";
+
+ // $("ol").click(function(){
+ //          $("ol").append(fourthBestSeller)
+ // })
+
+// $("li").click(function(){
+//     alert("CHECK OUT OUR NEW BEST SELLER!")
+//     }
+// )
+
+// Well that's not EXACTLY what I wanted - it's adding the fourth hat over and over and not alerting our user!
+//
+// $( "body" ).on( "click", "li", function() {
+//     alert($(this).text() + " works!" );
+// });
+
+// Excellent - looks like using .on and being a bit specific got us rolling and rocking!
+// Now how about a few less list items popping?
+
+// $("ol").click(function(){
+//     $("ol").append(fourthBestSeller);
+//     // $("ol").off("click")  // specific event off
+//     $("ol").off(); // all events for selector off
+// })
+//
+// $( "body" ).on( "click", "li", function() {
+//     alert($(this).text() + " works!" );
+// });
