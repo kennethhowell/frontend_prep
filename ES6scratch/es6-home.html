@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+//    var width = 100;
+//    console.log(width);
+//    var width = 200
+//    console.log(width);
+
+    function varScope (){
+    var width = 100;
+    console.log(width);
+    }
+
+// console.log(width);
+varScope();
+// console.log(width);
+
+var age = 100;
+
+// if (age > 12){
+//     var pupAge = age * 7;
+//     console.log("You are " + pupAge + " dog years old.");
+//
+// }
+
+    // even though pupAge was needed temporarily ^ note it has leaked out of the if statement with var
+    // let && const = scoped to the BLOCK [[ look for curly brackets {} to find BLOCK areas ]]
+if (age > 12){
+    let pupAge = age * 7;
+    console.log("You are " + pupAge + " dog years old.");
+
+}
+
+    // pupAge no longer leaking out of BLOCK [[ if stmt curly brackets ]]
+
+// let can only be assigned once vs. var
+//
+//     let points = 50;
+//     let points = 60; // error
+
+    let winner = false;
+    let points = 50;
+
+if (points > 40) {
+    let winner = true;
+    console.log("This is the inner winner! : " + winner);
+}
+
+console.log("This is the outer winner! : " + winner)
+</script>
+</body>
+</html>
