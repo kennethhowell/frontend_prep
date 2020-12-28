@@ -54,7 +54,32 @@ if (points > 40) {
     console.log("This is the inner winner! : " + winner);
 }
 
-console.log("This is the outer winner! : " + winner)
+console.log("This is the outer winner! : " + winner);
+
+//    const CANNOT be updated , const object properties CAN
+
+    // const person = {
+    // name: "Kenneth",
+    //     age: 32
+    // }
+    //
+    // person = {
+    // name: "Ken"
+    // } // no nada
+
+    // person.name = "Ken" //esta bien
+
+//    IFFE and Block: IFFE can now be replaced with a set of curly braces
+
+    (function (){
+     var oldway = "this";
+        console.log(oldway);
+    })();
+
+{
+    let newway = "that";
+    console.log(newway);
+}
 </script>
 </body>
 </html>
