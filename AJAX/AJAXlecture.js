@@ -94,9 +94,38 @@ var obj = {
 
 //Notice that .done and .fail will run one or the other dependent on the outcome, they are exclusive to each other
 
-//Putting our ideas into some motion:
+
+// Putting our ideas into some motion:
 //Our user wants to CLICK A BUTTON and have a RANDOM RECIPE show to them in the view
 
+// $("#rando").click(function(e){
+//     e.preventDefault();
+//     $.get("https://api.spoonacular.com/recipes/random?apiKey=" + apiKey).done(function(data, status)
+//     {
+//         // console.log(data.recipes[0].summary) // Stepping into our data. . data > first level ["recipes"] at the 0 index > the property I want ["summary"] from that data object
+//
+//         $("#recipeContainer").html("<h1>" + data.recipes[0].title + "</h1>"
+//             + "<p>" + data.recipes[0].summary + "</p>"
+//             + "<h4>Instructions</h4>"
+//             + "<p>" + data.recipes[0].instructions + "</p>")
+//
+//     })
+// })
+
+//Our user wants to SEARCH IN A FIELD and have the most RELEVANT RECIPE shown to them in the view
+
+$("#userSearch").click(function(e){
+    e.preventDefault();
+    let query = $("#searchValue").val();
+    $.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey + "&instructionsRequired=true").done(function(data, status)
+    {
+        // console.log(data.results[0]) //looks like it's working - getting an ARRAY of foods up :: notice our structure is different for this API > "results" vs "recipes" as the property to get into
+        $("#recipeContainer").html("<h1>" + data.results[0].title + "</h1>"
+            + "<img src='" + data.results[0].image + "'>"
+        )
+    })
+
+})
 
 
 
