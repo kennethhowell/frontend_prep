@@ -114,18 +114,21 @@ var obj = {
 
 //Our user wants to SEARCH IN A FIELD and have the most RELEVANT RECIPE shown to them in the view
 
-$("#userSearch").click(function(e){
+$("#userSearch").click(function(e) {
     e.preventDefault();
     let query = $("#searchValue").val();
-    $.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey + "&instructionsRequired=true").done(function(data, status)
-    {
-        // console.log(data.results[0]) //looks like it's working - getting an ARRAY of foods up :: notice our structure is different for this API > "results" vs "recipes" as the property to get into
+    $.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey).done(function (data, status) {
+        // console.log(data.results[0])
         $("#recipeContainer").html("<h1>" + data.results[0].title + "</h1>"
             + "<img src='" + data.results[0].image + "'>"
         )
+
+        $.get("https://api.spoonacular.com/recipes/" + data.results[0].id + "/information?apiKey=" + apiKey).done(function (data, status) {
+            console.log(data.summary);
+            $("#recipeContainer").append("<p>" + data.summary + "</p>"
+            + "<a href='" + data.spoonacularSourceUrl + "'>Check out the recipe!</a>")
+        })
+
     })
 
 })
-
-
-
