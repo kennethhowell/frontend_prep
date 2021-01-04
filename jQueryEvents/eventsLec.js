@@ -3,16 +3,17 @@
 // Where we were before:
 
  var searchInput = document.getElementById("searchHats");
-//
+
 // searchInput.addEventListener("input", function(){
 //     console.log(searchInput.value)
 // })
-
- function logSearch(){
-    console.log(searchInput.value)
- }
-
- // searchInput.addEventListener("input", logSearch)
+//
+//  function logSearch(){
+//     console.log(searchInput.value)
+//  }
+//
+//
+// searchInput.addEventListener("input", logSearch)
 
 
  // jQuery: not top to bottom different, but it helps to understand similar logic / methods in vanilla JavaScript
@@ -24,22 +25,25 @@
 // $(searchInput).on("input", logSearch);
 
  //Still have a target [an ID, a class, an element, a variable] chained to an event w/ a callback function
- // $(selector).event(function)
+
+
+ // $(selector).event("eventName", function);
 
  // .click() - let's use jQuery to add a little December color
 
 // $("#best-seller").click(function(){
+//
 //     $(this).css("background-color", "red");
 //     $(this).css("color", "lawngreen");
 //     $(this).css("width", "max-content");
 //
 //     $( "ol li:nth-child(even)" ).css( "background-color", "red" );
 //     $( "ol li:nth-child(even)" ).css( "color", "antiquewhite" );
-//     $( "ol li:nth-child(even)" ).css("width", "max-content");;
+//     $( "ol li:nth-child(even)" ).css("width", "max-content");
 //
 //     $("ol li:nth-child(odd)").css("background-color", "forestgreen");
 //     $("ol li:nth-child(odd)").css("color", "antiquewhite");
-//     $("ol li:nth-child(odd)").css("width", "max-content");;
+//     $("ol li:nth-child(odd)").css("width", "max-content");
 // })
 
  // .dblclick() + event.target
@@ -54,7 +58,7 @@
 
 // function bigFont(){
 //     $(this).css("font-size", "200%");
-// // }
+// }
 
 // $( "body" ).dblclick(bigFont);
 
@@ -77,6 +81,16 @@
 //      $(".hat-sold:last").css("text-decoration", "line-through")
 // })
 
+// $('.hat-sold:last').hover(
+//     // mouse entering: a function of what to do on entrance
+//     function() {
+//      $(".hat-sold:last").css("text-decoration", "line-through");
+//     },
+//     // mouse leaving: a function of what to do on exit
+//     function() {
+//      $(".hat-sold:last").css("text-decoration", "none");
+//     }
+// );
 
 // ~~ ** ~~ k e y b o a r d events ~~ ** ~~
 
@@ -99,7 +113,7 @@
 // $(document).keypress(function(e) {
 //     console.log(e);
 //     //we know we can access PROPERTIES in objects. . therefore:
-//     console.log("Key pressed: " + e.key);
+//     // console.log("Key pressed: " + e.key);
 // });
 
 
@@ -121,30 +135,40 @@
 
 var fourthBestSeller = "<li>Elf hats</li>";
 
- // $("ol").click(function(){
- //          $("ol").append(fourthBestSeller)
- // })
-
+//  $("ol").click(function(){
+//           $("ol").append(fourthBestSeller)
+//  })
+// //
 // $("li").click(function(){
 //     alert("CHECK OUT OUR NEW BEST SELLER!")
 //     }
 // )
 
 // Well that's not EXACTLY what I wanted - it's adding the fourth hat over and over and not alerting our user!
-//
+
 // $( "body" ).on( "click", "li", function() {
-//     alert($(this).text() + " works!" );
+//     // alert($(this).text() + " works!" );
+//     // $("h1").text("Elf hats");
 // });
 
 // Excellent - looks like using .on and being a bit specific got us rolling and rocking!
 // Now how about a few less list items popping?
 
+// $("ol").hover(function(){
+//     $("#bugReport").toggle();
+// }
+// )
+
+
 // $("ol").click(function(){
 //     $("ol").append(fourthBestSeller);
 //     // $("ol").off("click")  // specific event off
+//
 //     $("ol").off(); // all events for selector off
 // })
-//
-// $( "body" ).on( "click", "li", function() {
-//     alert($(this).text() + " works!" );
-// });
+
+// $("ol").off(); // all events for selector off
+// //
+$( "body" ).on( "click", "li", function() {
+    alert("Check out " + $(this).text() + " for sale!" );
+});
