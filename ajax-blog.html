@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Blog</title>
+    <style>
+        #posts {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
 <div id="posts"></div>
@@ -32,7 +37,17 @@
             //
             // })
 
+            for (let i = 0; i < data.length; i++){
+                HTML += '<div class="card" style="width: 18rem;">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title">' + data[i].title + '</h5>' +
+                '<h6 class="card-subtitle mb-2 text-muted">' + data[i].date + '</h6>' +
+            '<p class="card-text">' + data[i].content + '</p></div></div>'
+                $("#posts").append(HTML);
+                HTML = "";
+                }
 
+            //
             // data.forEach(function(post){
             //     HTML = `<div>
             //             <h4>${post.title}</h4>
