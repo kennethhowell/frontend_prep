@@ -246,7 +246,7 @@ const sayHello2 = (name = "World") => `Hello ${name}`;
 //
 // console.log(sayHello2());; // "Hello, World!"
 // console.log(sayHello2('codeup'));; // "Hello, codeup!"
-}
+// }
 
 //Object destructuring:
 
@@ -275,3 +275,4 @@ console.log(age);
 
 console.log(person.age + " is our changed age!");
 
+}
