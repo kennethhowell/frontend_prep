@@ -120,7 +120,7 @@ $.ajax("https://hookb.in/VGdRZoMaYbSE22bwzXqr",
 
     $("#userSearch").click(function (e) {
         e.preventDefault();
-        let query = $("#searchValue").val();
+        let query = $("#searchValue").val(); // a string that was input
         $.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey).done(function (data, status) {
             // console.log(data.results[0])
             $("#recipeContainer").html("<h1>" + data.results[0].title + "</h1>"
@@ -138,3 +138,4 @@ $.ajax("https://hookb.in/VGdRZoMaYbSE22bwzXqr",
     })
 
 }
+// https://api.spoonacular.com/recipes/complexSearch?query=lasagna&apiKey=6dd2e7a8653c449da0b7327f582bbd92
