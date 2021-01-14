@@ -10,10 +10,11 @@
 //     },
 //     body: JSON.stringify(blogPost),
 // };
-// fetch(url, options)
-//     .then(/* post was created successfully */)
-//     .catch(/* handle errors */);
-
+// // fetch(url, options)
+// //     .then(/* post was created successfully */)
+// //     .catch(/* handle errors */);
+//
+// console.log(blogPost);
 // console.log(options);
 
 
@@ -21,21 +22,23 @@
 // /dreams = our route
 
 const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
+    // const route = "/dreams";
+
 
 
 // fetch all of the dreams
 
-fetch(dreamApiURL).then(function (response) {
-   response.json().then(function(dreams){
-    console.log(dreams);
-
-})
-    })
+// fetch(dreamApiURL).then(function (response) {
+//    response.json().then(function(dreams){
+//     console.log(dreams);
+//
+// })
+//     })
 
 //Let's start manipulating some data!
 
 // const dreamObj = {
-//     "dream": "My dream is to have another kitty"
+//     "dream": "My dream is to lay around and do nada"
 // };
 
 // Add a new dream [dreamObj] up to our page that is brand spanking new
@@ -47,9 +50,15 @@ fetch(dreamApiURL).then(function (response) {
 //     },
 //     body: JSON.stringify(dreamObj),
 // };
+//
+
 
 // Target a specific url and update that with an entirely new dream (an {entire: object})
 
+// const dreamObj = {
+//     "dream": "My dream is to lay around and do nothing and plan out my next game session"
+// };
+//
 // const options = {
 //     method: 'PUT',
 //     headers: {
@@ -57,25 +66,31 @@ fetch(dreamApiURL).then(function (response) {
 //     },
 //     body: JSON.stringify(dreamObj),
 // };
+//
+
 
 
 // Target a specific url and update a specific property within ({property: changes})
-    let dreamString = "Patch up this dream";
-const options = {
-    method: 'PATCH',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({dream: dreamString})
-};
+//     let dreamString = "My dream is to have a big plate of mexican food with a tall glass of iced tea";
+// const patchMethod = {
+//     method: 'PATCH',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({dream: "Put our string in here"})
+// };
+
+// fetch(dreamApiURL + "/2", options).then(function (response){
+//     console.log(response);
+// })
 
 //Target a specific url and delete (permanently - no take backs) that target
 
-// const options = {
-//     method: 'DELETE',
-//     }
+const deleteMethod = {
+    method: 'DELETE'
+    }
 
-//
-fetch(dreamApiURL + "/2", options).then(function (response){
+// //
+fetch(dreamApiURL + "/5", {method: 'DELETE'}).then(function (response){
     console.log(response);
 })
