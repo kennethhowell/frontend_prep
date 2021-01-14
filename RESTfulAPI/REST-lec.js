@@ -53,7 +53,7 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 //
 
 
-// Target a specific url and update that with an entirely new dream (an {entire: object})
+// Target a specific url and update that resource found at that url with an entirely new resource (an {entire: object})
 
 // const dreamObj = {
 //     "dream": "My dream is to lay around and do nothing and plan out my next game session"
@@ -86,11 +86,11 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 
 //Target a specific url and delete (permanently - no take backs) that target
 
-const deleteMethod = {
-    method: 'DELETE'
-    }
+// const deleteMethod = {
+//     method: 'DELETE'
+//     }
 
 // //
-fetch(dreamApiURL + "/5", {method: 'DELETE'}).then(function (response){
-    console.log(response);
-})
+// fetch(dreamApiURL + "/5", {method: 'DELETE'}).then(function (response){
+//     console.log(response);
+// })
