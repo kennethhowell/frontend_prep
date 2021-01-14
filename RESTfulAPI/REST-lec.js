@@ -24,12 +24,13 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 
 
 // fetch all of the dreams
-// fetch(dreamApiURL).then(function (response) {
-//    response.json().then(function(dreams){
-//     console.log(dreams);
-//
-// })
-//     })
+
+fetch(dreamApiURL).then(function (response) {
+   response.json().then(function(dreams){
+    console.log(dreams);
+
+})
+    })
 
 //Let's start manipulating some data!
 
@@ -59,13 +60,14 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 
 
 // Target a specific url and update a specific property within ({property: changes})
-// const options = {
-//     method: 'PATCH',
-//     headers: {
-//         'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({dream: "Patch up this dream"})
-// };
+    let dreamString = "Patch up this dream";
+const options = {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({dream: dreamString})
+};
 
 //Target a specific url and delete (permanently - no take backs) that target
 
@@ -74,6 +76,6 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 //     }
 
 //
-fetch(dreamApiURL + "/3", options).then(function (response){
+fetch(dreamApiURL + "/2", options).then(function (response){
     console.log(response);
 })
