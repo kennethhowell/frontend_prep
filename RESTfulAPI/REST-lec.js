@@ -23,15 +23,15 @@ const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 
 
 // fetch all of the dreams
-fetch(dreamApiURL).then(function (response) {
-   response.json().then(function(dreams){
-    console.log(dreams);
-
-})
-    })
+// fetch(dreamApiURL).then(function (response) {
+//    response.json().then(function(dreams){
+//     console.log(dreams);
+//
+// })
+//     })
 
 // const dreamObj = {
-//     "body": "My dream is to have another kitty"
+//     "dream": "My dream is to have another kitty"
 // };
 //
 // const options = {
