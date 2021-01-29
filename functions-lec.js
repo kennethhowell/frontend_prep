@@ -3,7 +3,7 @@
 // (function () {
 // "use strict";
 //     function someFunctionNoParameters(){
-//         return alert("Hello there, Kalypso!");
+//         return alert("Hello there, Mars && Cobol!");
 //     }
 //
 //     function someFunctionWithParameter(name){
