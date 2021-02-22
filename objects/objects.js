@@ -23,6 +23,10 @@ var myDog = {
     breed: "Pembroke Welsh Corgi"
 }
 
+console.log(myCounty);
+
+console.log(myDog);
+
 //.log-ing the above gets us the object 'printed' or 'viewed' in the console where we can click into the object to see its shape [properties]
 
 /*
@@ -33,15 +37,15 @@ var myDog = {
 
 // We can call the 'constructor' for an object and use it to create our objects:
 
-var myCounty = new Object();
+var myObject = new Object();
 
-console.log(myCounty);
+console.log(myObject);
 
 //More often, we'll use this object literal notation structure as shown above and below:
 
-var myCounty = {};
+var myObject = {};
 
-console.log(typeof myCounty);
+console.log(typeof myObject);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
@@ -85,4 +89,36 @@ var sigotherCar = {
 //For me? I'm missing the year for myCar so. .
 
 myCar.year = 2017;
+
+//Now I have a completed example of the myCar object - the model and make were added above in prior examples
+
+/*
+* * * * * * * * * * * * * * * * * * * * * * * * * *
+*                Object Properties                *
+* * * * * * * * * * * * * * * * * * * * * * * * * *
+*/
+
+
+//With our myCar objects set up, let's start utilizing them and diving into them!
+//We can use dot notation or array notation in similar ways to start accessing these properties
+
+console.log("Hey, y'all! I own a " + myCar["make"] + " " + myCar.model) //Should concat from these two properties into this structure like we've been used to doing with variables
+
+//Speaking of variables, we can tap into our prior understanding of assigning variables thus far and assign a property to a variable:
+
+var myCarYear = myCar.year;
+
+console.log("Woops - forgot to tell you what year my vehicle is, it's model year " + myCarYear)
+
+//What if we wanted to create a more complicated piece of data? Perhaps a list of our cars FEATURES?
+
+myCar.features = ["Heated/ventilated seats", "leather", "towing package", "bed liner"]
+
+
+//Now we could do something like this. . a list of those features in the console
+for (let i = 0; i < myCar.features.length; i++){
+    console.log("Here's one of my car's features: " + myCar.features[i])
+}
+
+// TODO: Add an array of features that your vehicle has!
 
