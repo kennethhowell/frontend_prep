@@ -1,6 +1,9 @@
 //
 // // function definitions
-// "use strict";
+"use strict";
+
+// name = "Douglas";
+
 //     function someFunctionNoParameters(){
 //         return alert("Hello there, Marco!");
 //     }
@@ -91,3 +94,4 @@
 // console.log("hackerz Log: " + globalVar);
 //
 // // })();
+
