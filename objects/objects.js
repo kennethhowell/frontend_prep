@@ -1,5 +1,4 @@
 
-
 //What's going on with these objects?
 //Well: an OBJECT is a grouping of data + functionality
 //Our data. . we call properties [in a 'key:value' pair]
@@ -174,5 +173,5 @@ theGarage.forEach(function(car){
     car.turnOn();
 })
 
-//One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
+//One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
 
