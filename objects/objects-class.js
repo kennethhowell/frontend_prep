@@ -172,15 +172,3 @@
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
 
-var value = "banana";
-
-var myArr = value.split("")
-var myConsArr = [];
-
-for (var i = 0; i < myArr.length; i++){
-
-    if(myArr[i] === ("a" || "e" || "i" || "o" || "u")){
-        myArr[i] = "";
-    }
-}
-
