@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Helvetica;
+    font-family: Helvetica, fantasy;
     font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ main section {
 }
 
 .flex-container {
-    background: #faebd7;
+    background-color: #efb323;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -93,7 +93,7 @@ i {
 
 .boundary {
     background-color: cadetblue;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -104,4 +104,52 @@ i {
 .padding-boundary {
     background-color: #0d5353;
     padding: 0 7em 0 7em;
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        display: none;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   h2 {
+       font-size: medium;
+   }
+
+   h3 {
+       font-size: smaller;
+   }
+
+   .padding-boundary {
+       padding: 0 3.5em 0 3.5em;
+   }
+
+   .boundary {
+       padding-left: 2em;
+       padding-right: 2em;
+   }
+
+   .card {
+       width: 50vw;
+       height: 33vh;
+   }
+
+     nav div:nth-child(3), nav div:nth-child(4) {
+
+       display: none;
+   }
+
+     nav div:nth-child(1), nav div:nth-child(2) {
+       width: 50vw;
+   }
+
+
+
+   body {
+       overflow: hidden;
+   }
 }
