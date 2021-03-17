@@ -15,8 +15,6 @@ h2 {
     font-size: medium;
 }
 
-
-
 h3 {
     font-size: smaller;
     color: grey;
@@ -49,8 +47,7 @@ hr {
 }
 
 .flex-item {
-    border-right: 4px double #242E3F;
-    padding: 1em;
+   padding: 1em;
 }
 
 img {
@@ -84,7 +81,6 @@ i {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    border-top: 1px solid black;
     padding-top: 2em;
 }
 
@@ -99,17 +95,26 @@ nav div:nth-child(3), nav div:nth-child(4) {
 }
 
 nav div:nth-child(1), nav div:nth-child(2) {
-    width: 50vw;
+    flex-grow: 1;
 }
 
-nav div:nth-child(2){
-    border-right: none;
+nav div {
+    border: 2px double black;
 }
+
 @media screen and (min-width: 576px) {
+    body {
+        height: 100vh;
+    }
+
     img {
         display: inline-block;
         border-radius: 120px;
         width: 120px;
+    }
+
+    h2, h3 {
+        font-size: revert;
     }
 
     .icons {
@@ -120,7 +125,7 @@ nav div:nth-child(2){
 
     .padding-boundary {
         padding: 0 7em 0 7em;
-        height: 100vh;
+        height: 100%;
     }
 
     .boundary {
@@ -138,11 +143,10 @@ nav div:nth-child(2){
         display: inline-block;
     }
 
-    /*.text-section {*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    align-items: center;*/
-    /*}*/
+    nav div {
+        border: 2px double black;
+        flex-grow: 1;
+    }
 
 
 
