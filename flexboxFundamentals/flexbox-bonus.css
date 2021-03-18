@@ -29,11 +29,58 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+h2 {
+    font-weight: bolder;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
 .container {
     display: flex;
     flex-direction: column;
+
 }
 
 .top-container {
     display: flex;
+    justify-content: space-evenly;
+    padding: 3em 0;
+}
+
+.top-container ul {
+    list-style: none;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btm-container {
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-container{
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+}
+
+.icon-container i {
+    font-size: 2.5em;
+}
+
+span {
+    font-size: smaller;
+    padding: 1em 0 0 0;
 }
