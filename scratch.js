@@ -35,10 +35,11 @@
 // for(var outer = 1; outer <= 9; outer++){
 //     var output = '';
 //
-//     for(var inner = 1; inner <= outer; inner++ ){
-//         console.log("At this point our output bucket has: " + output + " and our outer counter is " + outer)
-//         output = output + outer;
-//     }
+//         for(var inner = 1; inner <= outer; inner++ ){
+//             console.log("At this point our output bucket has: " + output + " and our outer counter is " + outer)
+//             output = output + outer;
+//         }
+//
 //     console.log(output);
 // }
 //
@@ -136,4 +137,47 @@
 // // calculateChange([1, 2, 3], 10)      // false
 // // calculateChange("Codeup", 100)      // false
 // // calculateChange()                   // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 03/19/2021
+
+// Loops
+// While, Do-While, For, [.forEach > if we're working with a collection/array]
+
+// While (condition is always checked first)
+// while (condition){
+//     //things for loop to do
+// }
+
+
+// Do-while (DO at least once, then check condition)
+
+// do {
+//     // things for loop to do
+// } (condition)
+
+
+// For
+// for (initialization; condition; counter) {
+// stuff for loop to do
+// }
+
+// var shoppingCart = ["bananas", "bison", "beef", "bouillon", "bear claws", "boba tea", "bongos"]
+//
+// console.log(shoppingCart.length)
 
