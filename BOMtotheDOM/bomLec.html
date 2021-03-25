@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+</head>
+<body>
+<script>
+
+
+        "use strict";
+
+        //    TODO: Write a setInterval()
+
+        var count = 0;
+        var max = 10;
+        var interval = 1000;
+
+        // var intervalId = setInterval(function(){
+        //     if(count >= max){
+        //         // clearInterval does NOT exit this block of code
+        //         console.log('All done.');
+        //         clearInterval(intervalId);
+        //     } else {
+        //         count++;
+        //         console.log("Repeating this line " + count);
+        //     }
+        // }, interval);
+        //
+        // console.log(intervalId);
+        //
+        // function sayHello(){
+        //     console.log("Hello there!");
+        // }
+
+        // setInterval(sayHello,interval);
+
+        //10 seconds?
+        var delay = 10000;
+        console.log("you have 10 seconds.");
+        var timeoutId = setTimeout(function(){
+            alert("Refreshing the page!");
+            // window.location = 'https://java.codeup.com/javascript-i/bom-and-dom/bom/';
+            location.reload();
+        },delay);
+
+        //clearInterval(timeoutId)
+
+
+</script>
+</body>
+</html>
