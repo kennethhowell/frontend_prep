@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML and html()</title>
+</head>
+<body>
+
+    <div id="main">
+        <div>i am inside of #main :)</div>
+    <!-- no nada-->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    var contents = $("#main").html();
+    console.log("This is my console log before I do any changing in jQuery:" + contents);
+
+    // $("#main").html("<h1 style='background-color: rebeccapurple'>My Heading</h1><ol><li>list item</li><li>second list item</li><li>third item</li></ol>");
+
+    var changeHTML = "";
+    changeHTML += "<h1 style='background-color: rebeccapurple'>My Heading</h1>";
+    changeHTML += "<ol><li>list item</li>";
+    changeHTML += "<li>second list item</li>";
+    changeHTML += "<li>third item</li></ol>";
+
+    console.log(changeHTML);
+
+    // contents = $("#main").html();
+    // console.log("This is my console log after I made HTML changes in jQuery" + contents);
+
+
+</script>
+</body>
+</html>

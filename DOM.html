@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <nav>
+        <img>
+        <ul>
+            <li id="rollie">Roland</li>
+            <li id="mannie">Manny</li>
+            <li id="johnnie">John</li>
+            <li id="iffie">Iffy</li>
+        </ul>
+    </nav>
+    
+    <section>
+        
+    </section>
+
+<script>
+    //My goal: click on ROLAND, color changes on IFFY
+
+    //target.addEventListener(event, somethingtoDo)
+    //step one: target > check!
+    //step two: add the method to the target!
+    //step three: addEventListener has two parameters: one for an event, and one for what to do. What event am I using?
+
+    var clickTarget = document.getElementById("rollie")
+
+    var colorChange = function(){
+        // stuff to do
+        document.getElementById("iffie").style.backgroundColor = "rebeccapurple";
+    }
+
+    clickTarget.addEventListener("click", colorChange)
+
+</script>
+</body>
+</html>
