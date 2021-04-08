@@ -116,33 +116,6 @@
 //     }
 // }
 //
-//
-//
-// // 1. Define a function named `convertHourToSec` that takes in one input Hours. Return the conversation of the number of hours into total seconds. If the input is not numeric or a numeric string, `convertHourToSec`, should return false.
-// //
-// // convertHourToSec(0)                 // 0
-// // convertHourToSec(1)                 // 3600
-// // convertHourToSec(1.5)               // 5400
-// // convertHourToSec(true)              // false
-// // convertHourToSec(-1)                // false
-// // convertHourToSec(null)              // false
-// // convertHourToSec("2")               // 7200
-//
-// // 1. Write a function named `calculateChange` that takes in two inputs, totalPaid and totalCost. If both inputs are numeric or numeric strings, `calculateChange` should return the change after subtracting the cost from the amount paid. The return should be in `$x.xx` format as a string. If either or both inputs are not numeric or numeric strings, `calculateChange` should return false.
-// //
-// // calculateChange(7.50, 1.50)         // $6.00
-// // calculateChange(10, 5)              // $5.00
-// // calculateChange("100", 50)          // $50.00
-// // calculateChange(10, true)           // false
-// // calculateChange([1, 2, 3], 10)      // false
-// // calculateChange("Codeup", 100)      // false
-// // calculateChange()                   // false
-
-
-
-
-
-
 
 
 
