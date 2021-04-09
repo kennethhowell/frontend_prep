@@ -82,12 +82,13 @@ var replaceSpan = document.getElementById("userName");
 inputBtn.addEventListener("click",function(){
     var helloUserDiv = document.getElementById("helloUser");
     console.log(helloUserDiv.children);
-    if (helloUserDiv.children > 0){
-    helloUserDiv.innerHTML = "<div id=\"helloUser\">Hola, ni hao, guten tag, hello, bonjour to you, <span id=\"userName\">user</span>!</div>";}
 
     var inputArr = userInput.value.split("");
     inputArr[0] = inputArr[0].toUpperCase();
     var upperCased = inputArr.join("");
+
+    if (helloUserDiv.children.length === 0){
+    helloUserDiv.innerHTML = "<div id=\"helloUser\">Hola, ni hao, guten tag, hello, bonjour to you, <span id=\"userName\">" + upperCased + "</span>!</div>";}
 
     replaceSpan.innerText = upperCased;
 
