@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map ~ Filter ~ Reduce</title>
+</head>
+<body>
+
+<script>
+
+//TODO: Let's see a common approach to returning specific elements out of an area we've done before:
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var numbersAddOne = [];
+for (var i = 0; i < numbers.length; i += 1) {
+        numbersAddOne.push(numbers[i] + 1);
+}
+console.log(numbersAddOne); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+//TODO Together: Now, let's achieve the same result with the first part of our lesson: the MAP method~
+
+let numbersAddOneMap = numbers.map(function(num){
+    return num + 1;
+})
+
+console.log(numbersAddOneMap)
+
+//TODO Together: Let's try using a slightly more complicated collection - perhaps an array of objects similar to what you might
+
+//As you can see, .map() accepts a callback function - that callback function is applied to each element in the collection. What about a dive into a deeper, more complicated collection?
+
+const favoriteRestaurants = [
+    {
+        name: "India Palace",
+        address: "8474 Fredericksburg Rd, San Antonio, TX 78229",
+        phone: "(210) 692-5262"
+    },
+    {
+        name: "Taqueria Jalisco",
+        address: "7094 Bandera Rd, San Antonio, TX 78238",
+        phone: "(210) 543-9400" },
+    {
+        name: "Sukhothai Thai Restaurant Express",
+        address: "7664 Tezel Rd Suite 105, San Antonio, TX 78250" ,
+        phone: "(210) 314-1106"},
+]
+
+//TODO Together: Let's get all these restaurant names out of this array of objects with .map()!
+
+let addressList = favoriteRestaurants.map(function(restaurant){
+    return restaurant.address;
+})
+
+console.log(addressList);
+
+//TODO: Create your own list of (up to 3 and at least 2) restaurant objects building off of the basic list you created during the MapBox exercise (or build one new!) ~5 mins
+
+//TODO: Now, having created a personal array of restaurant objects for yourself, use .map() to get your favorite restaurant's names out of that collection, into another array, and out into the console! ~5 mins
+
+</script>
+</body>
+</html>
