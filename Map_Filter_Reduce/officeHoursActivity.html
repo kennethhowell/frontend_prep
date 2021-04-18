@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    const favoriteRestaurants = [
+        {
+            name: "India Palace",
+            address: "8474 Fredericksburg Rd, San Antonio, TX 78229",
+            phone: "(210) 692-5262",
+            restaurantFeatures: ["buffet", "party room", "to-go"]
+        },
+        {
+            name: "Taqueria Jalisco",
+            address: "7094 Bandera Rd, San Antonio, TX 78238",
+            phone: "(210) 543-9400" ,
+            restaurantFeatures: ["to-go", "breakfast"]
+        },
+        {
+            name: "Sukhothai Thai Restaurant Express",
+            address: "7664 Tezel Rd Suite 105, San Antonio, TX 78250",
+            phone: "(210) 314-1106",
+            restaurantFeatures: ["to-go", "limited seating"]
+        }
+    ]
+
+    let accumulator = [];
+    for(var i = 0; i < favoriteRestaurants.length; i++){
+    if(favoriteRestaurants[i].restaurantFeatures.length > accumulator.length){
+        accumulator = favoriteRestaurants[i].restaurantFeatures;
+     }
+    }
+
+    console.log("Hello! This is the ES5 way:"+ accumulator);
+
+
+
+   console.log( favoriteRestaurants.reduce(function (accumulator, restaurant){
+        if(restaurant.restaurantFeatures.length > accumulator.length){
+            accumulator = restaurant.restaurantFeatures;
+        }
+        return accumulator;
+    }, []))
+
+
+
+    // let isIntherightZipcode = favoriteRestaurants.reduce(function(correctAddress, restaurant){
+    //
+    //     if(restaurant.address.includes("78250")){
+    //         correctAddress = restaurant.address;
+    //     }
+    //
+    //     return correctAddress;
+    // }, "")
+    //
+    //
+    // console.log(isIntherightZipcode);
+
+
+
+
+
+
+</script>
+</body>
+</html>
