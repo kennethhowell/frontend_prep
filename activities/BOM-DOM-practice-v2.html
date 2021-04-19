@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM/DOM Practice Version 2</title>
+</head>
+<body>
+
+<input id="userInput">
+<button id="inputButton">How many words?</button>
+<div id="output"></div>
+
+<p id="sweetsParagraph">Liquorice powder sugar plum. Tart muffin lollipop chocolate cake pastry marshmallow cake gummi bears carrot cake. Jelly beans marzipan pastry jelly-o icing dragée muffin caramels. Danish cake macaroon croissant oat cake candy. Liquorice cake gummies apple pie marshmallow topping gummi bears. Cookie candy canes chocolate dragée cookie macaroon. Bear claw tart jelly toffee cake powder candy canes dragée cupcake. Powder gingerbread powder cookie. Cookie sesame snaps jelly-o danish. Pastry lemon drops wafer. Pastry dragée ice cream liquorice tootsie roll sesame snaps jelly-o candy canes oat cake. Ice cream apple pie cookie apple pie macaroon. Brownie biscuit lemon drops pie chocolate tiramisu. Cupcake jelly gummi bears soufflé.
+</p>
+<button id="yellowBtn">Make it yellow!</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    //TODO: When the button is clicked with the id of #inputButton, the value of what is inside of the input field of #userValue should effect the id of #output as so: #output should display the text "The number of words you entered is:" followed by the appropriate number representing the number of words from the user's input.
+
+//Step one - event for the button
+    // Step two - when event fires (instructions inside of the callback function): grab .val()
+    //Step three - split value grabbed into arr strs
+    //Step four - .length arr and get into #output appropriately
+
+    $("#inputButton").click(function(){
+
+      let userInput = $("#userInput").val();
+        $("#output").html(`The number of words you entered is: ${userInput.split(" ").length}`);
+
+    })
+
+
+    //TODO: I have a paragraph with the #sweetsParagraph. Whenever the button with the id of #yellowBtn is clicked, all of the words beginning with the letter "c" regardless of case will be now highlighted with a yellow background.
+
+    $("#yellowBtn").click(function(){
+        let sweetsArr = $("#sweetsParagraph").html().split(" ");
+
+        let workingArr = [];
+
+        $.each(sweetsArr, function(i, word){
+
+        if("c" === word.toLowerCase().split("")[0]){
+            let prepend = "<span style=\"background-color:yellow\">";
+            let postpend = "</span>";
+            let htmlWord = prepend+ word+ postpend;
+            workingArr.push(htmlWord);
+
+        } else {
+            workingArr.push(word);
+        }
+
+        })
+        $("#sweetsParagraph").html(workingArr.join(" "));
+    })
+
+    //TODO: as long as not beginning with "c", change background color of words > 8 characters to a nice pink color
+
+    //TODO: Grab data attribute to append to HTML / manipulate other part of the DOM
+
+    //TODO: .setInterval maybe some kind of flucuating background color?
+
+</script>
+</body>
+</html>
