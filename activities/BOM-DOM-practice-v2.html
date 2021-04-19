@@ -17,10 +17,12 @@
 <button id="bothBtn">Por que no los dos? (Why not both?)</button>
 
 <h6>Vegetarian and Non-Vegetarian Restaurants Nearby</h6>
-<ul>
-    <li data-type="veg" data-distance="1miles" data-dbid="1">Salad Czar</li>
-    <li data-type="notVeg" data-distance="2miles" data-dbid="2">Meat Man's Sandwich Stop</li>
+<ul id="restaurantResults">
+    <li data-veg="vegetarian" data-distance="1miles" data-dbid="1">Salad Czar</li>
+    <li data-veg="notVegetarian" data-distance="2miles" data-dbid="2">Meat Man's Sandwich Stop</li>
 </ul>
+
+<div id="isVeg"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
@@ -111,7 +113,38 @@
 
     //TODO Bonus: Refactor the above work where all three buttons can be clicked cleanly between each other and display their styles independently. First, a button to highlight the "c" words. Second, a button to highlight all non-"c" starting words with yellow. Lastly, a button that will apply both.
 
-    //TODO: Grab data attribute to append to HTML / manipulate other part of the DOM
+    //TODO: I have an unordered list #restaurantResults with two LIs representing a couple of restaurants. These <li>s have data-* attributes on the element representing whether or not they are vegetarian, their rough distance away, and then some database IDs we won't be needing. Depending on which <li> is hovered over, the div known as #isVeg should display a string similar to the following: "This restaurant is notVegetarian, is 2miles away, and is named restaurantName"
+
+    $("#restaurantResults li").hover(function(e){
+        let restaurantName =  $(e.target).html();
+        let isVeg =  $(e.target).attr("data-veg");
+        let distance =  $(e.target).attr("data-distance");
+
+        $("#isVeg").html(`This restaurant is ${isVeg}, is ${distance} away, and is named ${restaurantName}`);
+    })
+
+    //<h6>Vegetarian and Non-Vegetarian Restaurants Nearby</h6>
+    // <ul id="restaurantResults">
+    //     <li data-veg="vegetarian" data-distance="1miles" data-dbid="1">Salad Czar</li>
+    // <li data-veg="notVegetarian" data-distance="2miles" data-dbid="2">Meat Man's Sandwich Stop</li>
+    // </ul>
+    //
+    // <div id="isVeg"></div>
+
+    //TODO Bonus: Work on the formatting of the above ouutput string for #isVeg to adjust spacing and casing appropriately. For example, "This restaurant is notVegetarian, is 2miles away, and is named restaurantName" would now be "This restaurant is not vegetarian, is 2 miles away, and is named restaurantName".
+
+    $("#restaurantResults li").hover(function(e){
+        let restaurantName =  $(e.target).html();
+        let isVeg =  "";
+            if($(e.target).attr("data-veg") === "notVegetarian"){
+            isVeg = "not vegetarian";
+        } else {
+                isVeg = "vegetarian";
+            }
+        let distance =  $(e.target).attr("data-distance").slice(0,1) + " " +  $(e.target).attr("data-distance").slice(1);
+
+        $("#isVeg").html(`This restaurant is ${isVeg}, is ${distance} away, and is named ${restaurantName}`);
+    })
 
     //TODO: .setInterval maybe some kind of fluctuating background color?
 
