@@ -32,12 +32,12 @@
 const dreamApiURL = "https://watery-hammerhead-bay.glitch.me/dreams";
 // const route = "/dreams";
 
-// fetch(dreamApiURL).then(function (response) {
-//    response.json().then(function(dreams){
-//     console.log(dreams);
-//
-// })
-//     })
+fetch(dreamApiURL).then(function (response) {
+   response.json().then(function(dreams){
+    console.log(dreams);
+
+})
+    })
 
 //TODO Together: Now that we've gotten a list of what is over in our DREAMSApi, our next thing to attempt is to send some fresh data (a dream) up into it! I'll build a dream object to send over - I'll need to remember to program both a 'what' to send and then a 'how' (with the method, content-type, and body options) to have a complete looking POST request to send over.
 

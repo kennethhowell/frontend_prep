@@ -123,14 +123,6 @@
         $("#isVeg").html(`This restaurant is ${isVeg}, is ${distance} away, and is named ${restaurantName}`);
     })
 
-    //<h6>Vegetarian and Non-Vegetarian Restaurants Nearby</h6>
-    // <ul id="restaurantResults">
-    //     <li data-veg="vegetarian" data-distance="1miles" data-dbid="1">Salad Czar</li>
-    // <li data-veg="notVegetarian" data-distance="2miles" data-dbid="2">Meat Man's Sandwich Stop</li>
-    // </ul>
-    //
-    // <div id="isVeg"></div>
-
     //TODO Bonus: Work on the formatting of the above ouutput string for #isVeg to adjust spacing and casing appropriately. For example, "This restaurant is notVegetarian, is 2miles away, and is named restaurantName" would now be "This restaurant is not vegetarian, is 2 miles away, and is named restaurantName".
 
     $("#restaurantResults li").hover(function(e){
@@ -146,7 +138,12 @@
         $("#isVeg").html(`This restaurant is ${isVeg}, is ${distance} away, and is named ${restaurantName}`);
     })
 
-    //TODO: .setInterval maybe some kind of fluctuating background color?
+    //TODO: It seems throughout all of this our user is hungry - cupcake paragraphs, restaurants in a list? Let's go ahead and setTimeout for 10 seconds to redirect our user to "www.food.com" once the timer is done. That'll get them to all the food they could want!
+
+    // window.setTimeout(function(){
+    //     window.location = "https://www.food.com"
+    // }, 10000)
+
 
 </script>
 </body>
