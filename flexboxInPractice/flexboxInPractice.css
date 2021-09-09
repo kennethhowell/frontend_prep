@@ -1,0 +1,19 @@
+
+
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: mediumpurple;
+    border-bottom: 1px solid black;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+
