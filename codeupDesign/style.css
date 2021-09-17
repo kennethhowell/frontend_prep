@@ -1,0 +1,82 @@
+/*root css reset*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-bg-color);
+}
+
+/* Color Library */
+
+:root{
+    --main-bg-color: #f0f0f0;
+    --main-border-color: #e6e6e6;
+
+    --icon-color-design: #e6563b;
+    --icon-color-develop: #dea03d;
+    --icon-color-support: #7cb06c;
+    --icon-color-host: #00aba9;
+}
+
+/* font classes*/
+
+.abel {
+    font-family: 'Abel', sans-serif;
+}
+
+.anton {
+    font-family: 'Anton', sans-serif;
+}
+
+/* mobile native view */
+
+#topBanner {
+    position: relative;
+    margin-top: 5em;
+    width: 100vw;
+    background-color: white;
+    height: 15vh;
+}
+
+#logo {
+    position: absolute;
+    height: 25vh;
+    width: 40vw;
+    top: -35%;
+    left: 30%;
+}
+
+#mainContainer{
+    margin-top: 10vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#companyName {
+    font-size: 3em;
+}
+
+
+#xsNav {
+    margin-top: 1em;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+
+#callToAction{}
+
+#callToAction > div:nth-child(1){
+    font-size: 3em;
+    padding: 18px;
+}
+#callToAction > div:nth-child(2){
+    font-size: 1em;
+
+}
