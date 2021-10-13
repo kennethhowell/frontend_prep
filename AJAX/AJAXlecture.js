@@ -24,7 +24,7 @@ var obj = {
 // .ajax :: our first API request
 
 // // .ajax(url) - without any OPTIONS, defaults to a GET request:
-// $.ajax("https://hookb.in/b9pdPmJxM1UKGq00Gq19").done(function(data){
+// $.ajax("putHookbinLinkHere").done(function(data){
 //     console.log(data);
 // })
 
@@ -98,44 +98,44 @@ var obj = {
 //Notice that .done and .fail will run one or the other dependent on the outcome, they are exclusive to each other
 
 
-// Putting our ideas into some motion:
-//Our user wants to CLICK A BUTTON and have a RANDOM RECIPE show to them in the view
+// // Putting our ideas into some motion:
+// //Our user wants to CLICK A BUTTON and have a RANDOM RECIPE show to them in the view
+// //
+// $("#rando").click(function(e){
+//     e.preventDefault();
+//     $.get("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status)
+// {
+//     console.log(data.meals[0]) // Stepping into our data. . data > first level ["meals"] at the 0 index > I can see many object properties to get info from
 //
-$("#rando").click(function(e){
-    e.preventDefault();
-    $.get("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status)
-{
-    console.log(data.meals[0]) // Stepping into our data. . data > first level ["meals"] at the 0 index > I can see many object properties to get info from
-
-    $("#recipeContainer").html("<h1>" + data.meals[0].strMeal + "</h1>"
-        + "<span>" + "Category: " + data.meals[0].strCategory + "</span><br>"
-        + "<img src='" + data.meals[0].strMealThumb + "'>"
-        + "<h4>Instructions</h4>"
-        + "<p>" + data.meals[0].strInstructions + "</p>")
-
-    })
-})
-
-
-//Our user wants to SEARCH IN A FIELD and have the most RELEVANT RECIPE shown to them in the view
-
-    $("#userSearch").click(function (e) {
-        e.preventDefault();
-        let query = $("#searchValue").val(); // a string that was input
-        console.log(query);
-        $.get("https://www.themealdb.com/api/json/v1/1/search.php?s=" + query).done(function (data, status) {
-            if(data.meals === null){
-                $("#recipeContainer").html("No matches found :/");
-            }
-            var html = "<h1>" + data.meals[0].strMeal + "</h1>"
-                + "<span>" + "Category: " + data.meals[0].strCategory + "</span><br>"
-                + "<img src='" + data.meals[0].strMealThumb + "'>"
-                + "<h4>Instructions</h4>"
-                + "<p>" + data.meals[0].strInstructions + "</p>"
-                + "<a href='" + data.meals[0].strSource + "'>Take me to the recipe</a>"
-            $("#recipeContainer").html(html);
-
-
-        })
-    })
-
+//     $("#recipeContainer").html("<h1>" + data.meals[0].strMeal + "</h1>"
+//         + "<span>" + "Category: " + data.meals[0].strCategory + "</span><br>"
+//         + "<img src='" + data.meals[0].strMealThumb + "'>"
+//         + "<h4>Instructions</h4>"
+//         + "<p>" + data.meals[0].strInstructions + "</p>")
+//
+//     })
+// })
+//
+//
+// //Our user wants to SEARCH IN A FIELD and have the most RELEVANT RECIPE shown to them in the view
+//
+//     $("#userSearch").click(function (e) {
+//         e.preventDefault();
+//         let query = $("#searchValue").val(); // a string that was input
+//         console.log(query);
+//         $.get("https://www.themealdb.com/api/json/v1/1/search.php?s=" + query).done(function (data, status) {
+//             if(data.meals === null){
+//                 $("#recipeContainer").html("No matches found :/");
+//             }
+//             var html = "<h1>" + data.meals[0].strMeal + "</h1>"
+//                 + "<span>" + "Category: " + data.meals[0].strCategory + "</span><br>"
+//                 + "<img src='" + data.meals[0].strMealThumb + "'>"
+//                 + "<h4>Instructions</h4>"
+//                 + "<p>" + data.meals[0].strInstructions + "</p>"
+//                 + "<a href='" + data.meals[0].strSource + "'>Take me to the recipe</a>"
+//             $("#recipeContainer").html(html);
+//
+//
+//         })
+//     })
+//

@@ -93,8 +93,14 @@ let hasBuffet = favoriteRestaurants.filter(function(restaurant){
 console.log(hasBuffet);
 
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
+// TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
 
-//TODO: Once you've done the above, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
+let nameLessThan17 = favoriteRestaurants.filter(function(restaurant){
+    return restaurant.name.length < 17;
+})
+
+console.log(nameLessThan17);
+
 
 //~ * Reduce * ~
 
@@ -110,63 +116,16 @@ let sum = numbers.reduce(function(total, number){
 
 console.log("The total for this array summed is: " + sum);
 
-//TODO Together: Let's take a step a bit deeper with .reduce() - .reduce()'s output can take many forms and shapes. For example, let's say we wanted to have a little Javascript that would count the length of the strings in an array and return that info back to us in an object. For example: ["Codeup", "San Antonio", "Dallas", "Marco Cohort", "ES6"] would get us {}
+//TODO Together: Let's take a step a bit deeper with .reduce() - .reduce()'s output can take many forms and shapes. For example, let's say we wanted to have a little Javascript that would count the length of the strings in an array and return that info back to us in an object. For example: ["Codeup", "San", Antonio", "Dallas", "Quasar", Cohort", "ES6"] would get us: Object { Codeup: 6, San: 3, Antonio: 7, Dallas: 6, Quasar: 6, Cohort: 6, ES6: 3 }
 
-let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Marco", "Cohort", "ES6"];
+let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
 
-let strLngthObj = stringArr.reduce(function (result, ele){
-    result[ele] = ele.length; //assign the length as a property of key = ele
-    return result;
+let strLengthObj = stringArr.reduce(function(objectProp, element){
+    objectProp[element] = element.length; //assign the length as a value of the property named element {elementName: elementLength}
+    return objectProp;
 }, {})
 
-console.log(strLngthObj);
-
-//TODO Together: That's pretty wild, eh! Wonder what else we could get up to with .reduce() - how about we make a function and use .reduce() inside of it? We'll write a function named countWords that takes a sentence in a single string. We need to split that sentence into an array and then write a .reduce() that would let us know how many times each word appeared in the string.
-
-function countWords(sentence) {
-    let words = sentence.split(' '); // transform a sentence into an array of words
-    let wordCountObject = words.reduce(function(wordCounts, word) {
-        if (typeof wordCounts[word] === 'undefined') {
-            // if the word is not yet present in our object, set it's value to 1
-            wordCounts[word] = 1;
-        } else {
-            // otherwise increment the existing count
-            wordCounts[word] += 1;
-        }
-        return wordCounts;
-    }, {}); // start with an empty object
-    return wordCountObject;
-}
-
-let sentence = "Mary had a little lamb , little lamb , little lamb";
-
-
-console.log(countWords(sentence));
-
-//TODO Together: Pretty good, but do we want to count the number of times the comma is involved? If only we had a method that would .filter() - wait! Let's refactor the above function to do just that!
-
-function countWords(sentence) {
-    let words = sentence.split(' '); // transform a sentence into an array of words
-    words = words.filter(function(word){
-        return word !== ",";
-    }) //get out of here, comma! as long as the word is not strictly equivalent to a comma in a string, that word is headed into the words array
-    let wordCountObject = words.reduce(function(wordCounts, word) {
-        if (typeof wordCounts[word] === 'undefined') {
-            // if the word is not yet present in our object, set it's value to 1
-            wordCounts[word] = 1;
-        } else {
-            // otherwise increment the existing count
-            wordCounts[word] += 1;
-        }
-        return wordCounts;
-    }, {}); // start with an empty object
-    return wordCountObject;
-}
-
-let sentence = "Mary had a little lamb , little lamb , little lamb";
-
-
-console.log(countWords(sentence));
+console.log(strLengthObj);
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
 
